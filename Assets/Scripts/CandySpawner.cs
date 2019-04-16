@@ -7,12 +7,12 @@ public class CandySpawner : MonoBehaviour
     public float spawnTime = 1f;
     private int[,] spawnPoints = {
         {-400, -1058},
-        {-200, -1058},
-        {200, -1058},
+        {-125, -1058},
+        {125, -1058},
         {400, -1058},
         {-400, 1058},
-        {-200, 1058},
-        {200, 1058},
+        {-125, 1058},
+        {125, 1058},
         {400, 1058}
     };
 

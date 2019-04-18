@@ -1180,6 +1180,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 540533999294169071, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: spawnTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
         type: 3}
       propertyPath: scoreText

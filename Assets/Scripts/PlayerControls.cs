@@ -2,7 +2,7 @@
 
 public class PlayerControls : MonoBehaviour
 {
-    public float speed;
+    public float speed = 10.0f;
     private Rigidbody2D rb;
 
     void Start()
@@ -19,12 +19,8 @@ public class PlayerControls : MonoBehaviour
     }
 
     private void MovePlayer()
-    {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        Vector2 movement = new Vector2(moveHorizontal, 0.0f);
-        rb.AddForce(movement * speed);
-
-
+    {        
+        //Mobile
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -35,5 +31,9 @@ public class PlayerControls : MonoBehaviour
                 transform.position = Vector2.Lerp(transform.position, touchedPos, Time.deltaTime * speed);
             }
         }
+        //DEBUG PC
+        Vector2 pos = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, transform.position.y));
+        pos.y = transform.position.y;
+        transform.position = Vector2.Lerp(transform.position, pos, Time.deltaTime * speed);
     }
 }

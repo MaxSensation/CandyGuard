@@ -12,6 +12,14 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
+        if (!GameController.instance.IsGameOver())
+        {
+            MovePlayer();
+        }        
+    }
+
+    private void MovePlayer()
+    {
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(moveHorizontal, 0.0f);
         rb.AddForce(movement * speed);

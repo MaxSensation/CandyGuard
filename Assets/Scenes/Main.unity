@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -466,7 +466,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 0636aa2044a811040974e7266a8a816a, type: 3}
     m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
@@ -893,25 +893,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1437350911}
     m_Modifications:
-    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
+    - target: {fileID: 5829749491807363831, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
-      propertyPath: m_Color.r
-      value: 1
+      propertyPath: m_Name
+      value: Goal Colider Bottom
       objectReference: {fileID: 0}
-    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
+    - target: {fileID: 5829749491807363831, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: m_TagString
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5733962807390079860, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
@@ -1018,15 +1008,25 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5829749491807363831, guid: 75030353616ea8349a28e3ac566a7d68,
+    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
-      propertyPath: m_Name
-      value: Goal Colider Bottom
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5829749491807363831, guid: 75030353616ea8349a28e3ac566a7d68,
+    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
-      propertyPath: m_TagString
-      value: Goal
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68, type: 3}
@@ -1083,7 +1083,7 @@ RectTransform:
   m_Children:
   - {fileID: 382489063}
   m_Father: {fileID: 1852850236}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1273,25 +1273,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1437350911}
     m_Modifications:
-    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
+    - target: {fileID: 5829749491807363831, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
-      propertyPath: m_Color.r
-      value: 0
+      propertyPath: m_Name
+      value: Goal Colider Top
       objectReference: {fileID: 0}
-    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
+    - target: {fileID: 5829749491807363831, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: m_TagString
+      value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5733962807390079860, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
@@ -1398,15 +1388,25 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5829749491807363831, guid: 75030353616ea8349a28e3ac566a7d68,
+    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
-      propertyPath: m_Name
-      value: Goal Colider Top
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5829749491807363831, guid: 75030353616ea8349a28e3ac566a7d68,
+    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
-      propertyPath: m_TagString
-      value: Goal
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596760352506394134, guid: 75030353616ea8349a28e3ac566a7d68,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5829749491807363829, guid: 75030353616ea8349a28e3ac566a7d68,
         type: 3}
@@ -1447,6 +1447,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -145}
   m_SizeDelta: {x: 1080, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1379974066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1379974067}
+  - component: {fileID: 1379974069}
+  - component: {fileID: 1379974068}
+  m_Layer: 5
+  m_Name: Toner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1379974067
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379974066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 48.51684}
+  m_LocalScale: {x: 0.0051974147, y: 0.0051974147, z: 0.0051974147}
+  m_Children: []
+  m_Father: {fileID: 1852850236}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.3138593, y: -0.31045705}
+  m_SizeDelta: {x: 1080, y: 1924.0336}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1379974068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379974066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.49019608}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: ba487507138ee774cba719ef402affe8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1379974069
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379974066}
+  m_CullTransparentMesh: 0
 --- !u!1 &1437350907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,6 +2001,7 @@ Transform:
   m_LocalPosition: {x: -252.79094, y: 59.732975, z: -9334.803}
   m_LocalScale: {x: 192.40335, y: 192.40335, z: 192.40335}
   m_Children:
+  - {fileID: 1379974067}
   - {fileID: 1915026627}
   - {fileID: 1108184000}
   m_Father: {fileID: 1437350911}
@@ -2017,7 +2092,7 @@ RectTransform:
   m_LocalScale: {x: 0.0051974147, y: 0.0051974147, z: 0.0051974147}
   m_Children: []
   m_Father: {fileID: 1852850236}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2037,7 +2112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2045,7 +2120,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 0636aa2044a811040974e7266a8a816a, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -2593,6 +2668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.0231531
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283387558926540275, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4867d41b03002ce428aa1a76e3931a3b, type: 3}

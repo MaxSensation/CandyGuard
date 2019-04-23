@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Canvas
   - Goal
+  - Candies
   layers:
   - Default
   - TransparentFX

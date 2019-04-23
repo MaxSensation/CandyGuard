@@ -38,7 +38,7 @@ public class CandySpawner : MonoBehaviour
         int candyType = getCandyType();        
         Vector2 newPos = GetStartPosition();                
         GameObject candyObject = Instantiate(candy, newPos, candy.transform.rotation) as GameObject;
-        candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Candies").transform, false);
         int lane = GetLane(newPos);
         candyObject.GetComponent<Candy>().SetLane(lane);
         candyObject.GetComponent<Candy>().SetType(getCandyType());

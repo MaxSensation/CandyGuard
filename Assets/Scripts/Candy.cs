@@ -6,6 +6,7 @@ public class Candy : MonoBehaviour
     public float speed = 5f;
 
     private int lane;
+    private int type;
     private Rigidbody2D rb;
     private bool enteredArena = false;
 
@@ -49,6 +50,11 @@ public class Candy : MonoBehaviour
 
     public void SetLane(int lane) {
         this.lane = lane;
+    }
+
+    public void SetType(int type)
+    {
+        this.type = type;
     }
 
     void FlipDirection()

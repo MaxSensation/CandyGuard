@@ -3,8 +3,10 @@ using UnityEngine.UI;
 
 public class CandySpawner : MonoBehaviour
 {
-    public GameObject candy;
+    public int candyDifficulty = 1;
     public float spawnTime = 3f;
+    public GameObject candy;
+    public Sprite[] candyTypes;
 
     private int[,] spawnPoints = {
         {-400, -1058, 1},
@@ -33,12 +35,33 @@ public class CandySpawner : MonoBehaviour
 
     private void SpawnCandy()
     {
+        int candyType = getCandyType();        
         Vector2 newPos = GetStartPosition();                
         GameObject candyObject = Instantiate(candy, newPos, candy.transform.rotation) as GameObject;
         candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
         int lane = GetLane(newPos);
         candyObject.GetComponent<Candy>().SetLane(lane);
+        candyObject.GetComponent<Candy>().SetType(getCandyType());
         candyObject.GetComponent<Image>().color = SetColor(lane);
+        candyObject.GetComponent<Image>().sprite = SetCandyType(getCandyType());
+    }
+
+    private int getCandyType()
+    {
+        if (candyDifficulty == 1)
+        {
+            return Random.Range(1, 3);
+        }
+        else if (candyDifficulty == 2)
+        {
+            return Random.Range(2, 4);
+        }
+        return -1;
+    }
+
+    private Sprite SetCandyType(int candyType)
+    {
+        return candyTypes[candyType - 1];
     }
 
     private int GetLane(Vector2 newPos)

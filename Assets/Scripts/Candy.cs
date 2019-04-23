@@ -4,7 +4,9 @@ using UnityEngine.UI;
 public class Candy : MonoBehaviour
 {
     public float speed = 5f;
+    private float speedRotate = 100f;
 
+    private bool rotateRight = false;
     private int lane;
     private int type;
     private Rigidbody2D rb;
@@ -14,6 +16,32 @@ public class Candy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         AddForce();
+        GetRotation();
+    }
+
+    void Update()
+    {
+        Rotate();
+    }
+
+    private void GetRotation()
+    {
+        if (Random.Range(0,2) == 1)
+        {
+            rotateRight = true;
+        }
+    }
+
+    private void Rotate()
+    {
+        if (rotateRight)
+        {
+            transform.Rotate(Vector3.forward * Time.deltaTime * speedRotate);
+        }
+        else
+        {
+            transform.Rotate(Vector3.forward * Time.deltaTime * speedRotate * -1);
+        }     
     }
 
     void OnTriggerEnter2D(Collider2D colider)
@@ -38,11 +66,11 @@ public class Candy : MonoBehaviour
         {
             if (gameObject.transform.position.y >= 0)
             {
-                GameController.instance.Goal(lane, true, GetComponent<Image>().color);
+                GameController.instance.Goal(lane, true, GetComponent<SpriteRenderer>().color);
             }
             else
             {
-                GameController.instance.Goal(lane, false, GetComponent<Image>().color);
+                GameController.instance.Goal(lane, false, GetComponent<SpriteRenderer>().color);
             }
             Destroy(gameObject);
         }

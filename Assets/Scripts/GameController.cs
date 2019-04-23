@@ -5,7 +5,8 @@ public class GameController : MonoBehaviour
 {    
     public int goalLevel = 1;
     public Text scoreText;
-    public Text gameOverText;   
+    public Text gameOverText;
+    public GameObject[] candyBags;
     public static GameController instance = null;
 
     private bool gameover = false;
@@ -30,6 +31,19 @@ public class GameController : MonoBehaviour
     void Start()
     {        
         SetGoals();
+        SetCandyBagColors();
+    }
+
+    private void SetCandyBagColors()
+    {
+        candyBags[0].GetComponentInChildren<SpriteRenderer>().color = bottomColors[0];
+        candyBags[2].GetComponentInChildren<SpriteRenderer>().color = bottomColors[1];
+        candyBags[4].GetComponentInChildren<SpriteRenderer>().color = bottomColors[2];
+        candyBags[6].GetComponentInChildren<SpriteRenderer>().color = bottomColors[3];
+        candyBags[1].GetComponentInChildren<SpriteRenderer>().color = topColors[0];
+        candyBags[3].GetComponentInChildren<SpriteRenderer>().color = topColors[1];
+        candyBags[5].GetComponentInChildren<SpriteRenderer>().color = topColors[2];
+        candyBags[7].GetComponentInChildren<SpriteRenderer>().color = topColors[3];
     }
 
     public Color32 GetTopColor(int lane)
@@ -49,6 +63,20 @@ public class GameController : MonoBehaviour
             topColors = new Color32[4] {
                 new Color32(0, 255, 0, 255),
                 new Color32(0, 255, 0, 255),
+                new Color32(0, 255, 0, 255),
+                new Color32(0, 255, 0, 255)
+            };
+            bottomColors = new Color32[4] {
+                new Color32(255, 0, 0, 255),
+                new Color32(255, 0, 0, 255),
+                new Color32(255, 0, 0, 255),
+                new Color32(255, 0, 0, 255)
+            };
+        } else if (goalLevel == 2)
+        {
+            topColors = new Color32[4] {
+                new Color32(0, 0, 255, 255),
+                new Color32(0, 0, 255, 255),
                 new Color32(0, 255, 0, 255),
                 new Color32(0, 255, 0, 255)
             };

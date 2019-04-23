@@ -12,7 +12,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        if (!GameController.instance.IsGameOver())
+        if (!GameController.instance.IsGameover())
         {
             MovePlayer();
         }        

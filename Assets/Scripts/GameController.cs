@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {    
     public int goalLevel = 1;
     public Text scoreText;
-    public Text gameOverText;
+    public GameObject gameoverUI;
     public GameObject[] candyBags;
     public static GameController instance = null;
 
@@ -22,11 +23,16 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public bool IsGameOver()
+    public bool IsGameover()
     {
         return gameover;
     }
 
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("main");
+    }
 
     void Start()
     {        
@@ -138,6 +144,6 @@ public class GameController : MonoBehaviour
     private void GameOver()
     {
         gameover = true;
-        gameOverText.color = new Color32(0, 0, 0, 255);
+        gameoverUI.SetActive(true);
     }
 }

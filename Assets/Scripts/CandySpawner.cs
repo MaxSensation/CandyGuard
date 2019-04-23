@@ -26,7 +26,7 @@ public class CandySpawner : MonoBehaviour
 
     private void Update()
     {        
-        if (GameController.instance.IsGameOver())
+        if (GameController.instance.IsGameover())
         {
             CancelInvoke("SpawnCandy");
         }

@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 540533999294169064}
+  - component: {fileID: 7372609093935435217}
   - component: {fileID: 540533999294169071}
   - component: {fileID: 540533999294169065}
   m_Layer: 5
@@ -18,8 +18,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &540533999294169064
-RectTransform:
+--- !u!4 &7372609093935435217
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -32,11 +32,6 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540533999294169071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e529af094e77ed04e9f9fd3d804996e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candy: {fileID: 7387785689684491203, guid: 0d51935710b936d47a8006bbc40fcec0, type: 3}
-  gc: {fileID: 540533999294169065}
+  candyDifficulty: 1
   spawnTime: 3
+  candy: {fileID: 7387785689684491203, guid: 0d51935710b936d47a8006bbc40fcec0, type: 3}
+  candyTypes: []
 --- !u!114 &540533999294169065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,4 +62,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goalLevel: 1
   scoreText: {fileID: 0}
-  gameOverText: {fileID: 0}
+  gameoverUI: {fileID: 0}
+  candyBags: []

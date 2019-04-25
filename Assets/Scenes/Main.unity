@@ -2229,6 +2229,76 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1640923455}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 1915026628}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.data[0]
+      value: 
+      objectReference: {fileID: 9082360597246398493}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.data[1]
+      value: 
+      objectReference: {fileID: 1996002339}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.data[2]
+      value: 
+      objectReference: {fileID: 1756999445}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.data[3]
+      value: 
+      objectReference: {fileID: 844502885}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.data[4]
+      value: 
+      objectReference: {fileID: 353671171}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.data[5]
+      value: 
+      objectReference: {fileID: 1118318697}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.data[6]
+      value: 
+      objectReference: {fileID: 780304002}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: candyBags.Array.data[7]
+      value: 
+      objectReference: {fileID: 378414148}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: goalLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: gameOverUI
+      value: 
+      objectReference: {fileID: 1852850235}
+    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: gameoverUI
+      value: 
+      objectReference: {fileID: 1852850235}
     - target: {fileID: 540533999294169064, guid: dc03d3d29b65fe246a37225d18337110,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2400,76 +2470,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: bfd4458a7ac02ef4cb9b1cee7429845b,
         type: 3}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1640923455}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: gameOverText
-      value: 
-      objectReference: {fileID: 1915026628}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.data[0]
-      value: 
-      objectReference: {fileID: 9082360597246398493}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.data[1]
-      value: 
-      objectReference: {fileID: 1996002339}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.data[2]
-      value: 
-      objectReference: {fileID: 1756999445}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.data[3]
-      value: 
-      objectReference: {fileID: 844502885}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.data[4]
-      value: 
-      objectReference: {fileID: 353671171}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.data[5]
-      value: 
-      objectReference: {fileID: 1118318697}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.data[6]
-      value: 
-      objectReference: {fileID: 780304002}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: candyBags.Array.data[7]
-      value: 
-      objectReference: {fileID: 378414148}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: goalLevel
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: gameOverUI
-      value: 
-      objectReference: {fileID: 1852850235}
-    - target: {fileID: 540533999294169065, guid: dc03d3d29b65fe246a37225d18337110,
-        type: 3}
-      propertyPath: gameoverUI
-      value: 
-      objectReference: {fileID: 1852850235}
     - target: {fileID: 7372609093935435217, guid: dc03d3d29b65fe246a37225d18337110,
         type: 3}
       propertyPath: m_RootOrder

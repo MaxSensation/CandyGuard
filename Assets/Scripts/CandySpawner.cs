@@ -50,11 +50,11 @@ public class CandySpawner : MonoBehaviour
     {
         if (candyDifficulty == 1)
         {
-            return Random.Range(1, 3);
+            return Random.Range(1, 4);
         }
         else if (candyDifficulty == 2)
         {
-            return Random.Range(2, 4);
+            
         }
         return -1;
     }

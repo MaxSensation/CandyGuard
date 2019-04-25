@@ -94,11 +94,11 @@ public class Candy : MonoBehaviour
     {
         if (transform.position.y <= 0)
         {            
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed * 100 * Time.deltaTime);
         }
         else
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed * 100 * Time.deltaTime);
         }
     }
 }

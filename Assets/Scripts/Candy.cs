@@ -72,6 +72,7 @@ public class Candy : MonoBehaviour
                 GameController.instance.Goal(lane, false, GetComponent<SpriteRenderer>().color);
             }
             Destroy(gameObject);
+            GameController.instance.RemoveActiveCandy();
         }
     }
 

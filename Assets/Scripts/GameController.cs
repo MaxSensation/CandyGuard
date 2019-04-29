@@ -10,18 +10,21 @@ public class GameController : MonoBehaviour
     public GameObject[] candyBags;
     public static GameController instance = null;
 
+    private bool difficultyChangeActive = false;
+    private int candiesActive = 0;
     private int candyTypesGroup;
     private float candySpawnTime;
     private float candySpeed;
     private bool gameover = false;
     private int currentScore = 0;
+    private int targetScore = 0;
     private Color32[] topColors;
     private Color32[] bottomColors;
 
     void Awake()
-    {     
+    {
         if (instance == null)
-            instance = this;            
+            instance = this;
         else if (instance != this)
             Destroy(gameObject);
         SetDifficulty(difficulty);
@@ -38,9 +41,14 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("main");
     }
 
+    public bool DifficultyChangeActive()
+    {
+        return difficultyChangeActive;
+    }
+
     void Start()
     {
-        Application.targetFrameRate = 60;        
+        Application.targetFrameRate = 60;
         SetCandyBagColors();
     }
 
@@ -48,17 +56,18 @@ public class GameController : MonoBehaviour
     {
         if (difficulty == 1)
         {
+            targetScore = 5;
             SetGoals(1);
             candyTypesGroup = 1;
-            candySpawnTime = 3f;
+            candySpawnTime = 1.5f;
             candySpeed = 2f;
         }
         else if (difficulty == 2)
         {
-            SetGoals(1);
+            SetGoals(2);
             candyTypesGroup = 1;
-            candySpawnTime = 1.5f;
-            candySpeed = 2.5f;
+            candySpawnTime = 1f;
+            candySpeed = 3f;
         }
     }
 
@@ -91,8 +100,18 @@ public class GameController : MonoBehaviour
     }
 
     public Color32 GetTopColor(int lane)
-    {        
+    {
         return topColors[lane - 1];
+    }
+
+    public void AddActiveCandy()
+    {
+        candiesActive += 1;
+    }
+
+    public void RemoveActiveCandy()
+    {
+        candiesActive -= 1;
     }
 
     public Color32 GetBottomColor(int lane)
@@ -119,16 +138,16 @@ public class GameController : MonoBehaviour
         } else if (goalLevel == 2)
         {
             topColors = new Color32[4] {
-                new Color32(0, 0, 0, 255),
-                new Color32(0, 0, 0, 255),
-                new Color32(0, 0, 0, 255),
-                new Color32(0, 0, 0, 255)
+                new Color32(255, 100, 100, 255),
+                new Color32(130, 255, 130, 255),
+                new Color32(255, 100, 100, 255),
+                new Color32(130, 255, 130, 255)
             };
             bottomColors = new Color32[4] {
-                new Color32(0, 0, 0, 255),
-                new Color32(0, 0, 0, 255),
-                new Color32(0, 0, 0, 255),
-                new Color32(0, 0, 0, 255)
+                new Color32(130, 255, 130, 255),
+                new Color32(255, 100, 100, 255),
+                new Color32(130, 255, 130, 255),
+                new Color32(255, 100, 100, 255)
             };
         }
     }
@@ -137,6 +156,31 @@ public class GameController : MonoBehaviour
     {
         currentScore += points;
         scoreText.text = currentScore.ToString();
+        if (currentScore == targetScore)
+        {
+            SetDifficultyChangeActive();
+        }
+    }
+
+    void Update()
+    {
+        if (difficultyChangeActive && candiesActive == 0)
+        {
+            IncreaseDifficulty();
+        }
+    }
+
+    private void SetDifficultyChangeActive()
+    {
+        difficultyChangeActive = true;
+    }
+
+    private void IncreaseDifficulty()
+    {        
+        difficulty += 1;
+        SetDifficulty(difficulty);
+        SetCandyBagColors();
+        difficultyChangeActive = false;
     }
 
     public void Goal(int lane, bool top, Color32 color)

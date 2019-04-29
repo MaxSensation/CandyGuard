@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Candy : MonoBehaviour
 {
-    public float speed = 5f;
     private float speedRotate = 100f;
 
     private bool rotateRight = false;
@@ -94,11 +93,11 @@ public class Candy : MonoBehaviour
     {
         if (transform.position.y <= 0)
         {            
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed * 100 * Time.deltaTime);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameController.instance.GetCandySpeed() * 100 * Time.deltaTime);
         }
         else
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, -speed * 100 * Time.deltaTime);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, -GameController.instance.GetCandySpeed() * 100 * Time.deltaTime);
         }
     }
 }

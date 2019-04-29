@@ -41,8 +41,8 @@ public class CandySpawner : MonoBehaviour
             int lane = GetLane(newPos);
             candyObject.GetComponent<Candy>().SetLane(lane);
             candyObject.GetComponent<Candy>().SetType(getCandyType());
-            candyObject.GetComponent<SpriteRenderer>().color = SetColor(lane);
-            candyObject.GetComponent<SpriteRenderer>().sprite = SetCandyType(getCandyType());
+            candyObject.GetComponentInChildren<SpriteRenderer>().color = SetColor(lane);
+            candyObject.GetComponentInChildren<SpriteRenderer>().sprite = SetCandyType(getCandyType());
             GameController.instance.AddActiveCandy();
         }
     }

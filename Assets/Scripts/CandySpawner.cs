@@ -32,22 +32,26 @@ public class CandySpawner : MonoBehaviour
 
     private void SpawnCandy()
     {
-        int candyType = getCandyType();        
-        Vector2 newPos = GetStartPosition();                
-        GameObject candyObject = Instantiate(candy, newPos, candy.transform.rotation) as GameObject;
-        candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Candies").transform, false);
-        int lane = GetLane(newPos);
-        candyObject.GetComponent<Candy>().SetLane(lane);
-        candyObject.GetComponent<Candy>().SetType(getCandyType());
-        candyObject.GetComponent<SpriteRenderer>().color = SetColor(lane);
-        candyObject.GetComponent<SpriteRenderer>().sprite = SetCandyType(getCandyType());
+        if (GameController.instance.DifficultyChangeActive() == false)
+        {
+            int candyType = getCandyType();
+            Vector2 newPos = GetStartPosition();
+            GameObject candyObject = Instantiate(candy, newPos, candy.transform.rotation) as GameObject;
+            candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Candies").transform, false);
+            int lane = GetLane(newPos);
+            candyObject.GetComponent<Candy>().SetLane(lane);
+            candyObject.GetComponent<Candy>().SetType(getCandyType());
+            candyObject.GetComponentInChildren<SpriteRenderer>().color = SetColor(lane);
+            candyObject.GetComponentInChildren<SpriteRenderer>().sprite = SetCandyType(getCandyType());
+            GameController.instance.AddActiveCandy();
+        }
     }
 
     private int getCandyType()
     {
         if (GameController.instance.GetCandyTypesGroup() == 1)
         {
-            return Random.Range(1, 3);
+            return Random.Range(1, 4);
         }
         else if (GameController.instance.GetCandyTypesGroup() == 2)
         {

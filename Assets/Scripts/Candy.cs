@@ -34,12 +34,12 @@ public class Candy : MonoBehaviour
     private void Rotate()
     {
         if (rotateRight)
-        {
-            transform.Rotate(Vector3.forward * Time.deltaTime * speedRotate);
+        {            
+            GetComponentInChildren<Transform>().Rotate(Vector3.forward * Time.deltaTime * speedRotate);
         }
         else
         {
-            transform.Rotate(Vector3.forward * Time.deltaTime * speedRotate * -1);
+            GetComponentInChildren<Transform>().Rotate(Vector3.forward * Time.deltaTime * speedRotate * -1);
         }     
     }
 
@@ -65,13 +65,14 @@ public class Candy : MonoBehaviour
         {
             if (gameObject.transform.position.y >= 0)
             {
-                GameController.instance.Goal(lane, true, GetComponent<SpriteRenderer>().color);
+                GameController.instance.Goal(lane, true, GetComponentInChildren<SpriteRenderer>().color);
             }
             else
             {
-                GameController.instance.Goal(lane, false, GetComponent<SpriteRenderer>().color);
+                GameController.instance.Goal(lane, false, GetComponentInChildren<SpriteRenderer>().color);
             }
             Destroy(gameObject);
+            GameController.instance.RemoveActiveCandy();
         }
     }
 

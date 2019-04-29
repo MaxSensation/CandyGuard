@@ -34,7 +34,7 @@ public class Candy : MonoBehaviour
     private void Rotate()
     {
         if (rotateRight)
-        {
+        {            
             transform.Rotate(Vector3.forward * Time.deltaTime * speedRotate);
         }
         else

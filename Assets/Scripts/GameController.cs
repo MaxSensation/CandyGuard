@@ -50,8 +50,8 @@ public class GameController : MonoBehaviour
         {
             SetGoals(1);
             candyTypesGroup = 1;
-            candySpawnTime = 1.5f;
-            candySpeed = 2.5f;
+            candySpawnTime = 3f;
+            candySpeed = 2f;
         }
         else if (difficulty == 2)
         {
@@ -105,10 +105,10 @@ public class GameController : MonoBehaviour
         if (goalLevel == 1)
         {
             topColors = new Color32[4] {
-                new Color32(255, 255, 130, 255),
-                new Color32(255, 255, 130, 255),
-                new Color32(255, 255, 130, 255),
-                new Color32(255, 255, 130, 255)
+                new Color32(255, 100, 100, 255),
+                new Color32(255, 100, 100, 255),
+                new Color32(255, 100, 100, 255),
+                new Color32(255, 100, 100, 255)
             };
             bottomColors = new Color32[4] {
                 new Color32(130, 255, 130, 255),
@@ -119,16 +119,16 @@ public class GameController : MonoBehaviour
         } else if (goalLevel == 2)
         {
             topColors = new Color32[4] {
-                new Color32(255, 0, 0, 255),
-                new Color32(255, 0, 0, 255),
-                new Color32(0, 255, 0, 255),
-                new Color32(0, 255, 0, 255)
+                new Color32(0, 0, 0, 255),
+                new Color32(0, 0, 0, 255),
+                new Color32(0, 0, 0, 255),
+                new Color32(0, 0, 0, 255)
             };
             bottomColors = new Color32[4] {
-                new Color32(0, 255, 0, 255),
-                new Color32(0, 255, 0, 255),
-                new Color32(255, 0, 0, 255),
-                new Color32(255, 0, 0, 255)
+                new Color32(0, 0, 0, 255),
+                new Color32(0, 0, 0, 255),
+                new Color32(0, 0, 0, 255),
+                new Color32(0, 0, 0, 255)
             };
         }
     }

@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class CandySpawner : MonoBehaviour
 {
-    public int candyDifficulty = 1;
-    public float spawnTime = 3f;
     public GameObject candy;
     public Sprite[] candyTypes;
 
@@ -20,8 +17,8 @@ public class CandySpawner : MonoBehaviour
     };
 
     private void Start()
-    {
-        InvokeRepeating("SpawnCandy", spawnTime, spawnTime);        
+    {        
+        InvokeRepeating("SpawnCandy", GameController.instance.GetCandySpawnTime(), GameController.instance.GetCandySpawnTime());
     }
 
     private void Update()
@@ -48,13 +45,13 @@ public class CandySpawner : MonoBehaviour
 
     private int getCandyType()
     {
-        if (candyDifficulty == 1)
+        if (GameController.instance.GetCandyTypesGroup() == 1)
         {
-            return Random.Range(1, 4);
+            return Random.Range(1, 3);
         }
-        else if (candyDifficulty == 2)
+        else if (GameController.instance.GetCandyTypesGroup() == 2)
         {
-            
+            return Random.Range(4, 6);
         }
         return -1;
     }

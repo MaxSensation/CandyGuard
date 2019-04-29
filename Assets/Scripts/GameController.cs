@@ -3,13 +3,16 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
-{    
-    public int goalLevel = 1;
+{
+    public int difficulty = 1;
     public Text scoreText;
     public GameObject gameoverUI;
     public GameObject[] candyBags;
     public static GameController instance = null;
 
+    private int candyTypesGroup;
+    private float candySpawnTime;
+    private float candySpeed;
     private bool gameover = false;
     private int currentScore = 0;
     private Color32[] topColors;
@@ -21,6 +24,7 @@ public class GameController : MonoBehaviour
             instance = this;            
         else if (instance != this)
             Destroy(gameObject);
+        SetDifficulty(difficulty);
     }
 
     public bool IsGameover()
@@ -36,10 +40,43 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        Application.targetFrameRate = 60;
-        SetGoals();
+        Application.targetFrameRate = 60;        
         SetCandyBagColors();
     }
+
+    private void SetDifficulty(int difficulty)
+    {
+        if (difficulty == 1)
+        {
+            SetGoals(1);
+            candyTypesGroup = 1;
+            candySpawnTime = 1.5f;
+            candySpeed = 2.5f;
+        }
+        else if (difficulty == 2)
+        {
+            SetGoals(1);
+            candyTypesGroup = 1;
+            candySpawnTime = 1.5f;
+            candySpeed = 2.5f;
+        }
+    }
+
+    public int GetCandyTypesGroup()
+    {
+        return candyTypesGroup;
+    }
+
+    public float GetCandySpawnTime()
+    {
+        return candySpawnTime;
+    }
+
+    public float GetCandySpeed()
+    {
+        return candySpeed;
+    }
+
 
     private void SetCandyBagColors()
     {
@@ -63,7 +100,7 @@ public class GameController : MonoBehaviour
         return bottomColors[lane - 1];
     }
 
-    private void SetGoals()
+    private void SetGoals(int goalLevel)
     {
         if (goalLevel == 1)
         {

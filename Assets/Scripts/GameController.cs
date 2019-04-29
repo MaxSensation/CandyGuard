@@ -130,20 +130,6 @@ public class GameController : MonoBehaviour
                 new Color32(255, 0, 0, 255),
                 new Color32(255, 0, 0, 255)
             };
-        } else if (goalLevel == 3)
-        {
-            topColors = new Color32[4] {
-                new Color32(255, 0, 0, 255),
-                new Color32(0, 255, 0, 255),
-                new Color32(0, 0, 255, 255),
-                new Color32(100, 100, 0, 255)
-            };
-            bottomColors = new Color32[4] {
-                new Color32(100, 100, 0, 255),
-                new Color32(0, 0, 255, 255),
-                new Color32(0, 255, 0, 255),
-                new Color32(255, 0, 0, 255)
-            };
         }
     }
 

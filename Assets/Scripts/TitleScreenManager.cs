@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class TitleScreenManager : MonoBehaviour
 {
-    public Animation candyAnimation;
+    public Animator candyAnimator;
 
 
     private void Start()
     {
-        candyAnimation.wrapMode = WrapMode.Once;
-        candyAnimation.Play();
+
     }
 
 

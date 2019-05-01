@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TitleScreenManager : MonoBehaviour
-{
-    public Animator candyAnimator;
+{    
+    public Animator[] candies;
     public GameObject startScreen;
 
 
     private void Start()
-    {
-        candyAnimator = GetComponent<Animator>();
+    {        
         startScreen = GameObject.Find("Start Screen");
     }
 
@@ -19,7 +18,10 @@ public class TitleScreenManager : MonoBehaviour
     {
         if (startScreen.activeInHierarchy) 
         {
-            candyAnimator.Play("Candy Animation", 0, 0);
+            for (int i = 0; i < candies.Length; i++)
+            {
+                candies[i].GetComponent<Animator>().Play("CandyAnimation");
+            }
         }
     }
 }

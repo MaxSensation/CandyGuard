@@ -541,7 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d6494eb4306cf46a404daea04a4d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  candyAnimator: {fileID: 0}
+  candyAnimator: {fileID: 13172881}
+  startScreen: {fileID: 307631499}
 --- !u!1 &323016551
 GameObject:
   m_ObjectHideFlags: 0

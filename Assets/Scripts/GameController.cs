@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     public int difficulty = 1;
     public Text scoreText;
+    public Text levelText;
     public GameObject gameoverUI;
     public GameObject[] candyBags;
     public static GameController instance = null;
@@ -59,10 +60,16 @@ public class GameController : MonoBehaviour
             targetScore = 5;
             SetGoals(1);
             candyTypesGroup = 1;
-            candySpawnTime = 1.5f;
+            candySpawnTime = 3f;
             candySpeed = 2f;
-        }
-        else if (difficulty == 2)
+        } else if (difficulty == 2)
+        {
+            targetScore = 10;
+            SetGoals(2);
+            candyTypesGroup = 1;
+            candySpawnTime = 2.5f;
+            candySpeed = 3f;
+        } else if (difficulty == 3)
         {
             SetGoals(2);
             candyTypesGroup = 1;
@@ -165,8 +172,9 @@ public class GameController : MonoBehaviour
     void Update()
     {
         if (difficultyChangeActive && candiesActive == 0)
-        {
+        {            
             IncreaseDifficulty();
+            levelText.text = difficulty.ToString();
         }
     }
 

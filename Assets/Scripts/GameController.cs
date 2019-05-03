@@ -68,8 +68,8 @@ public class GameController : MonoBehaviour
             targetScore = 10;
             SetGoals(1);
             candyTypesGroup = 1;
-            candySpawnTime = 2.5f;
-            candySpeed = 3f;
+            candySpawnTime = 3f;
+            candySpeed = 2.5f;
         }
         else if (difficulty == 3)
         {
@@ -77,7 +77,7 @@ public class GameController : MonoBehaviour
             SetGoals(2);
             candyTypesGroup = 1;
             candySpawnTime = 2.5f;
-            candySpeed = 3f;
+            candySpeed = 2.5f;
         }
         else if (difficulty == 4)
         {
@@ -85,15 +85,15 @@ public class GameController : MonoBehaviour
             SetGoals(2);
             candyTypesGroup = 1;
             candySpawnTime = 2.5f;
-            candySpeed = 4f;
+            candySpeed = 3f;
         }
         else if (difficulty == 5)
         {
             targetScore = 25;
-            SetGoals(3);
+            SetGoals(2);
             candyTypesGroup = 1;
-            candySpawnTime = 2f;
-            candySpeed = 4f;
+            candySpawnTime = 2.5f;
+            candySpeed = 3f;
         }
         else if (difficulty == 6)
         {
@@ -101,38 +101,53 @@ public class GameController : MonoBehaviour
             SetGoals(3);
             candyTypesGroup = 1;
             candySpawnTime = 2f;
-            candySpeed = 5f;
+            candySpeed = 3f;
         }
         else if (difficulty == 7)
+        {
+            targetScore = 30;
+            SetGoals(3);
+            candyTypesGroup = 1;
+            candySpawnTime = 1.7f;
+            candySpeed = 3.5f;
+        }
+        else if (difficulty == 8)
         {
             targetScore = 35;
             SetGoals(3);
             candyTypesGroup = 1;
-            candySpawnTime = 1.8f;
-            candySpeed = 5f;
+            candySpawnTime = 1.7f;
+            candySpeed = 4f;
         }
-        else if (difficulty == 8)
+        else if (difficulty == 9)
         {
             targetScore = 40;
             SetGoals(3);
             candyTypesGroup = 1;
-            candySpawnTime = 1.7f;
-            candySpeed = 6f;
+            candySpawnTime = 1.5f;
+            candySpeed = 4f;
         }
-        else if (difficulty == 9)
+        else if (difficulty == 10)
         {
             targetScore = 50;
             SetGoals(3);
             candyTypesGroup = 1;
-            candySpawnTime = 1.5f;
-            candySpeed = 7f;
+            candySpawnTime = 1.3f;
+            candySpeed = 4f;
         }
-        else if (difficulty == 10)
+        else if (difficulty == 11)
         {
             SetGoals(3);
             candyTypesGroup = 1;
             candySpawnTime = 1.4f;
-            candySpeed = 8f;
+            candySpeed = 5f;
+        }
+        else if (difficulty == 12)
+        {
+            SetGoals(3);
+            candyTypesGroup = 1;
+            candySpawnTime = 1.2f;
+            candySpeed = 5f;
         }
     }
 

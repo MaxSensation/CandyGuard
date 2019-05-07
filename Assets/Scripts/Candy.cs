@@ -7,7 +7,7 @@ public class Candy : MonoBehaviour
     private bool rotateRight = false;
     protected int lane;
     private int type;
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
     protected bool enteredArena = false;
 
     void Start()
@@ -22,7 +22,7 @@ public class Candy : MonoBehaviour
         Rotate();
     }
 
-    private void GetRotation()
+    protected void GetRotation()
     {
         if (Random.Range(0,2) == 1)
         {
@@ -64,7 +64,7 @@ public class Candy : MonoBehaviour
         rb.velocity = rb.velocity * -1;
     }
 
-    private void AddForce()
+    protected void AddForce()
     {
         if (transform.position.y <= 0)
         {            

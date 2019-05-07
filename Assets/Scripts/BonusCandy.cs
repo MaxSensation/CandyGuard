@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class BonusCandy : Candy
 {
+    ParticleSystem ps;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        AddForce();
+        GetRotation();
+        ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        var colorOverLifetime = ps.colorOverLifetime;
+        Gradient grad = new Gradient();
+        grad.SetKeys(new GradientColorKey[] { new GradientColorKey(GetComponentInChildren<SpriteRenderer>().color, 0.0f), new GradientColorKey(Color.white, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) });        
+        colorOverLifetime.color = new ParticleSystem.MinMaxGradient(grad);
+    }
+
     void OnTriggerEnter2D(Collider2D colider)
     {
         if (colider.gameObject.tag == "Player")
@@ -14,7 +27,7 @@ public class BonusCandy : Candy
         {
             Goal();
         }
-    }
+    }    
 
     void Goal()
     {

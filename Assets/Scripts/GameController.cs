@@ -318,7 +318,7 @@ public class GameController : MonoBehaviour
             SetGoals(1);
             candyTypesGroup = 1;
             candySpawnTime = 3f;
-            bonusCandySpawnTime = 10f;
+            bonusCandySpawnTime = 20f;
             candySpeed = 2f;
         }
         else if (difficulty == 2)

@@ -34,7 +34,7 @@ public class CandySpawner : MonoBehaviour
 
     private void SpawnCandy()
     {
-        if (GameController.instance.DifficultyChangeActive() == false)
+        if (GameController.instance.IsGameover() == false)
         {
             int candyType = getCandyType();
             Vector2 newPos = GetStartPosition();
@@ -52,16 +52,19 @@ public class CandySpawner : MonoBehaviour
 
     private void SpawnBonusCandy()
     {
-        Vector2 newPos = GetStartPosition();
-        int lane = GetLane(newPos);
-        GameObject candyObject;        
-        candyObject = Instantiate(bonusCandy, newPos, bonusCandy.transform.rotation) as GameObject;
-        candyObject.GetComponent<Candy>().SetLane(lane);
-        candyObject.GetComponent<Candy>().SetType(1);
-        candyObject.GetComponentInChildren<SpriteRenderer>().color = SetColor(lane);
-        candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Candies").transform, false);
-        candyObject.GetComponentInChildren<SpriteRenderer>().sprite = SetCandyType(1);        
-        GameController.instance.AddActiveCandy();
+        if (GameController.instance.IsGameover() == false)
+        {
+            Vector2 newPos = GetStartPosition();
+            int lane = GetLane(newPos);
+            GameObject candyObject;
+            candyObject = Instantiate(bonusCandy, newPos, bonusCandy.transform.rotation) as GameObject;
+            candyObject.GetComponent<Candy>().SetLane(lane);
+            candyObject.GetComponent<Candy>().SetType(1);
+            candyObject.GetComponentInChildren<SpriteRenderer>().color = SetColor(lane);
+            candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Candies").transform, false);
+            candyObject.GetComponentInChildren<SpriteRenderer>().sprite = SetCandyType(1);
+            GameController.instance.AddActiveCandy();
+        }
     }
 
     private int getCandyType()

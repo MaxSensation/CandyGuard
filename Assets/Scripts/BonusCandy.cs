@@ -13,7 +13,7 @@ public class BonusCandy : Candy
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
         var colorOverLifetime = ps.colorOverLifetime;
         Gradient grad = new Gradient();
-        grad.SetKeys(new GradientColorKey[] { new GradientColorKey(GetComponentInChildren<SpriteRenderer>().color, 0.0f), new GradientColorKey(Color.white, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) });        
+        grad.SetKeys(new GradientColorKey[] { new GradientColorKey(GetComponentInChildren<SpriteRenderer>().color * 1.20f, 0.0f), new GradientColorKey(Color.white, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) });        
         colorOverLifetime.color = new ParticleSystem.MinMaxGradient(grad);
     }
 

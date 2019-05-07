@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     public Text levelText;
     public GameObject gameoverUI;
+    public GameObject highScoreUI;    
     public GameObject[] candyBags;
     public static GameController instance = null;
 
@@ -387,5 +388,11 @@ public class GameController : MonoBehaviour
     {
         gameover = true;
         gameoverUI.SetActive(true);
+        if (currentScore > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", currentScore);
+            highScoreUI.transform.Find("ScoreText").GetComponent<Text>().text = currentScore.ToString();
+            highScoreUI.SetActive(true);            
+        }
     }
 }

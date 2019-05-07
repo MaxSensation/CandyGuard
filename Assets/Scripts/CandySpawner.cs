@@ -34,7 +34,7 @@ public class CandySpawner : MonoBehaviour
 
     private void SpawnCandy()
     {
-        if (GameController.instance.IsGameover() == false)
+        if (GameController.instance.IsGameover() == false && GameController.instance.DifficultyChangeActive() == false)
         {
             int candyType = getCandyType();
             Vector2 newPos = GetStartPosition();
@@ -52,7 +52,7 @@ public class CandySpawner : MonoBehaviour
 
     private void SpawnBonusCandy()
     {
-        if (GameController.instance.IsGameover() == false)
+        if (GameController.instance.IsGameover() == false && GameController.instance.DifficultyChangeActive() == false)
         {
             Vector2 newPos = GetStartPosition();
             int lane = GetLane(newPos);

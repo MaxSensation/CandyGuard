@@ -403,6 +403,7 @@ public class GameController : MonoBehaviour
         }
         else if (difficulty == 12)
         {
+            targetScore = 100000;
             SetGoals(8);
             candyTypesGroup = 1;
             candySpawnTime = 1.5f;

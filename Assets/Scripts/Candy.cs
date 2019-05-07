@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class Candy : MonoBehaviour
 {
     private float speedRotate = 100f;
 
     private bool rotateRight = false;
-    private int lane;
+    protected int lane;
     private int type;
     private Rigidbody2D rb;
-    private bool enteredArena = false;
+    protected bool enteredArena = false;
 
     void Start()
     {
@@ -43,36 +42,11 @@ public class Candy : MonoBehaviour
         }     
     }
 
-    void OnTriggerEnter2D(Collider2D colider)
+    private void OnTriggerEnter2D(Collider2D colider)
     {
         if (colider.gameObject.tag == "Player")
         {
             FlipDirection();
-        }
-        if (colider.gameObject.tag == "Goal")
-        {
-            Goal();
-        }
-    }
-
-    void Goal()
-    {
-        if (enteredArena == false)
-        {
-            enteredArena = true;            
-        }
-        else
-        {
-            if (gameObject.transform.position.y >= 0)
-            {
-                GameController.instance.Goal(lane, true, GetComponentInChildren<SpriteRenderer>().color);
-            }
-            else
-            {
-                GameController.instance.Goal(lane, false, GetComponentInChildren<SpriteRenderer>().color);
-            }
-            Destroy(gameObject);
-            GameController.instance.RemoveActiveCandy();
         }
     }
 
@@ -85,12 +59,12 @@ public class Candy : MonoBehaviour
         this.type = type;
     }
 
-    void FlipDirection()
+    protected void FlipDirection()
     {
         rb.velocity = rb.velocity * -1;
     }
 
-    void AddForce()
+    private void AddForce()
     {
         if (transform.position.y <= 0)
         {            

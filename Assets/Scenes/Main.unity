@@ -2890,7 +2890,7 @@ PrefabInstance:
     - target: {fileID: 540533999294169071, guid: dc03d3d29b65fe246a37225d18337110,
         type: 3}
       propertyPath: candyTypes.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 540533999294169071, guid: dc03d3d29b65fe246a37225d18337110,
         type: 3}
@@ -2907,7 +2907,7 @@ PrefabInstance:
         type: 3}
       propertyPath: candyTypes.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: f4dd41c11537000498bf45bea4d43178,
+      objectReference: {fileID: 21300000, guid: 982765799a806374cba6b2f7dabf0567,
         type: 3}
     - target: {fileID: 540533999294169071, guid: dc03d3d29b65fe246a37225d18337110,
         type: 3}
@@ -2925,13 +2925,25 @@ PrefabInstance:
         type: 3}
       propertyPath: candyTypes.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 74186930b2abbb24bbafa72fc52869f9,
+      objectReference: {fileID: 21300000, guid: f4dd41c11537000498bf45bea4d43178,
         type: 3}
     - target: {fileID: 540533999294169071, guid: dc03d3d29b65fe246a37225d18337110,
         type: 3}
       propertyPath: candyTypes.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: bfd4458a7ac02ef4cb9b1cee7429845b,
+        type: 3}
+    - target: {fileID: 540533999294169071, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: bonusCandy
+      value: 
+      objectReference: {fileID: 6637596200299588391, guid: bb42ce393bb2dde40b286f569b7f6aa3,
+        type: 3}
+    - target: {fileID: 540533999294169071, guid: dc03d3d29b65fe246a37225d18337110,
+        type: 3}
+      propertyPath: normalCandy
+      value: 
+      objectReference: {fileID: 449894249284747861, guid: 06083f9b02265a14c8a3a13d21b4fa58,
         type: 3}
     - target: {fileID: 7372609093935435217, guid: dc03d3d29b65fe246a37225d18337110,
         type: 3}

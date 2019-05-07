@@ -2,9 +2,10 @@
 
 public class CandySpawner : MonoBehaviour
 {
-    public GameObject candy;
+    public GameObject normalCandy;
+    public GameObject bonusCandy;
     public Sprite[] candyTypes;
-
+    
     private int[,] spawnPoints = {
         {-400, -1058, 1},
         {-400, 1058, 1},
@@ -19,6 +20,7 @@ public class CandySpawner : MonoBehaviour
     private void Start()
     {        
         InvokeRepeating("SpawnCandy", GameController.instance.GetCandySpawnTime(), GameController.instance.GetCandySpawnTime());
+        InvokeRepeating("SpawnBonusCandy", GameController.instance.GetBonusCandySpawnTime(), GameController.instance.GetBonusCandySpawnTime());
     }
 
     private void Update()
@@ -36,26 +38,37 @@ public class CandySpawner : MonoBehaviour
         {
             int candyType = getCandyType();
             Vector2 newPos = GetStartPosition();
-            GameObject candyObject = Instantiate(candy, newPos, candy.transform.rotation) as GameObject;
-            candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Candies").transform, false);
             int lane = GetLane(newPos);
+            GameObject candyObject;
+            candyObject = Instantiate(normalCandy, newPos, normalCandy.transform.rotation) as GameObject;
             candyObject.GetComponent<Candy>().SetLane(lane);
-            candyObject.GetComponent<Candy>().SetType(getCandyType());
+            candyObject.GetComponent<Candy>().SetType(candyType);
             candyObject.GetComponentInChildren<SpriteRenderer>().color = SetColor(lane);
-            candyObject.GetComponentInChildren<SpriteRenderer>().sprite = SetCandyType(getCandyType());
+            candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Candies").transform, false);
+            candyObject.GetComponentInChildren<SpriteRenderer>().sprite = SetCandyType(candyType);                  
             GameController.instance.AddActiveCandy();
         }
+    }
+
+    private void SpawnBonusCandy()
+    {
+        Vector2 newPos = GetStartPosition();
+        int lane = GetLane(newPos);
+        GameObject candyObject;        
+        candyObject = Instantiate(bonusCandy, newPos, bonusCandy.transform.rotation) as GameObject;
+        candyObject.GetComponent<Candy>().SetLane(lane);
+        candyObject.GetComponent<Candy>().SetType(1);
+        candyObject.GetComponentInChildren<SpriteRenderer>().color = SetColor(lane);
+        candyObject.transform.SetParent(GameObject.FindGameObjectWithTag("Candies").transform, false);
+        candyObject.GetComponentInChildren<SpriteRenderer>().sprite = SetCandyType(1);        
+        GameController.instance.AddActiveCandy();
     }
 
     private int getCandyType()
     {
         if (GameController.instance.GetCandyTypesGroup() == 1)
         {
-            return Random.Range(1, 4);
-        }
-        else if (GameController.instance.GetCandyTypesGroup() == 2)
-        {
-            return Random.Range(4, 6);
+            return Random.Range(2, 5);
         }
         return -1;
     }

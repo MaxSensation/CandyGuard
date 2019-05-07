@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     private int candiesActive = 0;
     private int candyTypesGroup;
     private float candySpawnTime;
+    private float bonusCandySpawnTime;
     private float candySpeed;
     private bool gameover = false;
     private int currentScore = 0;
@@ -66,6 +67,7 @@ public class GameController : MonoBehaviour
             SetGoals(1);
             candyTypesGroup = 1;
             candySpawnTime = 3f;
+            bonusCandySpawnTime = 10f;
             candySpeed = 2f;
         }
         else if (difficulty == 2)
@@ -166,6 +168,11 @@ public class GameController : MonoBehaviour
     {
         return candySpawnTime;
     }
+
+    public float GetBonusCandySpawnTime()
+    {
+        return bonusCandySpawnTime;
+    }    
 
     public float GetCandySpeed()
     {
@@ -366,33 +373,7 @@ public class GameController : MonoBehaviour
         difficultyChangeActive = false;
     }
 
-    public void Goal(int lane, bool top, Color32 color)
-    {
-        if (top)
-        {
-            if (GetTopColor(lane).Equals(color))
-            {
-                AddScore(1);
-            }
-            else
-            {
-                GameOver();
-            }
-        }
-        else
-        {
-            if (GetBottomColor(lane).Equals(color))
-            {
-                AddScore(1);
-            }
-            else
-            {
-                GameOver();
-            }
-        }
-    }
-
-    private void GameOver()
+    public void GameOver()
     {
         gameover = true;
         gameoverUI.SetActive(true);

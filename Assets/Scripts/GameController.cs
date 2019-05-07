@@ -43,6 +43,16 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("main");
     }
 
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+    }
+
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("StartScreenMenu");

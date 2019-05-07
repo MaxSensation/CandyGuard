@@ -355,7 +355,7 @@ public class GameController : MonoBehaviour
     {
         currentScore += points;
         scoreText.text = currentScore.ToString();
-        if (currentScore == targetScore)
+        if (currentScore >= targetScore)
         {
             SetDifficultyChangeActive();
         }

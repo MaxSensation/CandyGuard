@@ -42,6 +42,11 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("main");
     }
 
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("StartScreenMenu");
+    }
+
     public bool DifficultyChangeActive()
     {
         return difficultyChangeActive;

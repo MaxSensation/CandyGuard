@@ -332,6 +332,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyBag (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9082360598063829629, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9082360598063829630, guid: c7640acb983415e4ab02f9c4f0d5c92b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -387,6 +392,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9107131710901651013, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b1c96e765b1f08d4e8ceb3d41287efd1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7640acb983415e4ab02f9c4f0d5c92b, type: 3}
 --- !u!4 &353671170 stripped
@@ -491,6 +501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CandyBag (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082360598063829629, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9082360598063829630, guid: c7640acb983415e4ab02f9c4f0d5c92b,
         type: 3}
@@ -1164,6 +1179,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyBag (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9082360598063829629, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9082360598063829630, guid: c7640acb983415e4ab02f9c4f0d5c92b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1224,6 +1244,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: -170.0846
       objectReference: {fileID: 0}
+    - target: {fileID: 9107131710901651013, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b1c96e765b1f08d4e8ceb3d41287efd1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7640acb983415e4ab02f9c4f0d5c92b, type: 3}
 --- !u!4 &780304001 stripped
@@ -1255,6 +1280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CandyBag (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082360598063829629, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9082360598063829630, guid: c7640acb983415e4ab02f9c4f0d5c92b,
         type: 3}
@@ -1836,6 +1866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CandyBag (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082360598063829629, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9082360598063829630, guid: c7640acb983415e4ab02f9c4f0d5c92b,
         type: 3}
@@ -2964,6 +2999,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyBag (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9082360598063829629, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9082360598063829630, guid: c7640acb983415e4ab02f9c4f0d5c92b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3024,6 +3064,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: -170.0846
       objectReference: {fileID: 0}
+    - target: {fileID: 9107131710901651013, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b1c96e765b1f08d4e8ceb3d41287efd1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7640acb983415e4ab02f9c4f0d5c92b, type: 3}
 --- !u!4 &1756999444 stripped
@@ -3471,6 +3516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CandyBag (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082360598063829629, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9082360598063829630, guid: c7640acb983415e4ab02f9c4f0d5c92b,
         type: 3}
@@ -4132,6 +4182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyBag (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9082360598063829629, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9082360598063829630, guid: c7640acb983415e4ab02f9c4f0d5c92b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4197,6 +4252,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 9107131710901651013, guid: c7640acb983415e4ab02f9c4f0d5c92b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b1c96e765b1f08d4e8ceb3d41287efd1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7640acb983415e4ab02f9c4f0d5c92b, type: 3}
 --- !u!1 &9082360597246398493 stripped

@@ -90,6 +90,20 @@ public class GameController : MonoBehaviour
         return candySpeed;
     }
 
+    public void AnimateBag(bool top, int lane)
+    {
+        int[] topI = { 1, 3, 5, 7 };
+        int[] bottomI = { 0, 2, 4, 6 };        
+
+        if (top)
+        {
+            candyBags[topI[lane - 1]].GetComponent<Animator>().Play("TopBagAnimation");
+        }
+        else
+        {
+            candyBags[bottomI[lane - 1]].GetComponent<Animator>().Play("BottomBagAnimation");
+        }
+    }
 
     private void SetCandyBagColors()
     {

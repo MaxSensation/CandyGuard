@@ -167,6 +167,7 @@ public class GameController : MonoBehaviour
         SetDifficulty(difficulty);
         SetCandyBagColors();
         difficultyChangeActive = false;
+        AddSparklesToAllBags();
     }
 
     public void GameOver()
@@ -178,6 +179,14 @@ public class GameController : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", currentScore);
             highScoreUI.transform.Find("ScoreText").GetComponent<Text>().text = currentScore.ToString();
             highScoreUI.SetActive(true);            
+        }
+    }
+
+    public void AddSparklesToAllBags()
+    {
+        for (int i = 0; i < candyBags.Length; i++)
+        {
+            candyBags[i].GetComponentInChildren<ParticleSystem>().Play();
         }
     }
 

@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
         SetDifficulty(difficulty);
+        Cursor.visible = false;
     }
 
     public bool IsGameover()
@@ -302,7 +303,7 @@ public class GameController : MonoBehaviour
                 green
             };
         }
-        else if (goalLevel == 7)
+        else if (goalLevel == 8)
         {
             topColors = new Color32[4] {
                 yellow,
@@ -317,106 +318,303 @@ public class GameController : MonoBehaviour
                 yellow
             };
         }
+        else if (goalLevel == 9)
+        {
+            topColors = new Color32[4] {
+                orange,
+                green,
+                red,
+                yellow
+            };
+            bottomColors = new Color32[4] {
+                yellow,
+                red,
+                green,
+                orange
+            };
+        }
+        else if (goalLevel == 10)
+        {
+            topColors = new Color32[4] {
+                yellow,
+                red,
+                green,
+                orange
+            };
+            bottomColors = new Color32[4] {
+                orange,
+                green,
+                red,
+                yellow
+            };
+        }
+        else if (goalLevel == 11)
+        {
+            topColors = new Color32[4] {
+                red,
+                orange,
+                yellow,
+                green
+            };
+            bottomColors = new Color32[4] {
+                green,
+                yellow,
+                orange,
+                red
+            };
+        }
+        else if (goalLevel == 12)
+        {
+            topColors = new Color32[4] {
+                green,
+                yellow,
+                orange,
+                red
+            };
+            bottomColors = new Color32[4] {
+                red,
+                orange,
+                yellow,
+                green
+            };
+        }
+        else if (goalLevel == 13)
+        {
+            topColors = new Color32[4] {
+                yellow,
+                green,
+                yellow,
+                green
+            };
+            bottomColors = new Color32[4] {
+                orange,
+                red,
+                orange,
+                red
+            };
+        }
+        else if (goalLevel == 14)
+        {
+            topColors = new Color32[4] {
+                orange,
+                red,
+                orange,
+                red
+            };
+            bottomColors = new Color32[4] {
+                yellow,
+                green,
+                yellow,
+                green
+            };
+        }
+        else if (goalLevel == 15)
+        {
+            topColors = new Color32[4] {
+                yellow,
+                green,
+                green,
+                yellow
+            };
+            bottomColors = new Color32[4] {
+                orange,
+                red,
+                red,
+                orange
+            };
+        }
     }
 
     private void SetDifficulty(int difficulty)
     {
         if (difficulty == 1)
         {
-            targetScore = 5;
-            SetGoals(1);
             candyTypesGroup = 1;
+            targetScore = 5;
+            SetGoals(1);            
             candySpawnTime = 3f;
             bonusCandySpawnTime = 20.1f;
             candySpeed = 2f;
         }
         else if (difficulty == 2)
         {
-            targetScore = 10;
-            SetGoals(1);
-            candyTypesGroup = 1;
+            targetScore = 20;
+            SetGoals(1);            
             candySpawnTime = 3f;
             candySpeed = 2.2f;
         }
         else if (difficulty == 3)
         {
-            targetScore = 15;
-            SetGoals(2);
-            candyTypesGroup = 1;
+            targetScore = 35;
+            SetGoals(2);            
             candySpawnTime = 3f;
             candySpeed = 2.3f;
         }
         else if (difficulty == 4)
         {
-            targetScore = 20;
-            SetGoals(2);
-            candyTypesGroup = 1;
+            targetScore = 50;
+            SetGoals(2);           
             candySpawnTime = 2.8f;
             candySpeed = 2.4f;
         }
         else if (difficulty == 5)
         {
-            targetScore = 25;
-            SetGoals(2);
-            candyTypesGroup = 1;
+            targetScore = 60;
+            SetGoals(2);            
             candySpawnTime = 2.8f;
             candySpeed = 2.5f;
         }
         else if (difficulty == 6)
         {
-            targetScore = 30;
-            SetGoals(3);
-            candyTypesGroup = 1;
+            targetScore = 80;
+            SetGoals(3);         
             candySpawnTime = 2.5f;
             candySpeed = 2.6f;
         }
         else if (difficulty == 7)
         {
-            targetScore = 35;
-            SetGoals(3);
-            candyTypesGroup = 1;
+            targetScore = 95;
+            SetGoals(3);            
             candySpawnTime = 2.5f;
             candySpeed = 2.7f;
         }
         else if (difficulty == 8)
-        {
-            targetScore = 40;
-            SetGoals(4);
-            candyTypesGroup = 1;
+        {            
+            targetScore = 110;
+            SetGoals(4);            
             candySpawnTime = 2.5f;
             candySpeed = 2.8f;
         }
         else if (difficulty == 9)
-        {
-            targetScore = 45;
-            SetGoals(5);
-            candyTypesGroup = 1;
+        {            
+            targetScore = 125;
+            SetGoals(5);           
             candySpawnTime = 2.3f;
             candySpeed = 2.9f;
         }
         else if (difficulty == 10)
-        {
-            targetScore = 50;
-            SetGoals(6);
-            candyTypesGroup = 1;
+        {            
+            targetScore = 140;
+            SetGoals(6);            
             candySpawnTime = 2.3f;
             candySpeed = 3f;
         }
         else if (difficulty == 11)
-        {
-            targetScore = 55;
-            SetGoals(7);
-            candyTypesGroup = 1;
+        {         
+            targetScore = 155;
+            SetGoals(7);            
             candySpawnTime = 2f;
             candySpeed = 3.1f;
         }
         else if (difficulty == 12)
         {
-            targetScore = 100000;
-            SetGoals(8);
-            candyTypesGroup = 1;
+            targetScore = 170;
+            SetGoals(8);         
             candySpawnTime = 1.5f;
             candySpeed = 3.2f;
+        }
+        else if (difficulty == 13)
+        {            
+            targetScore = 185;
+            SetGoals(8);            
+            candySpawnTime = 1.5f;
+            candySpeed = 3.2f;
+        }
+        else if (difficulty == 14)
+        {
+            targetScore = 200;
+            SetGoals(5);
+            candySpawnTime = 1.3f;
+            bonusCandySpawnTime = 22f;
+            candySpeed = 3.5f;
+        }
+        else if (difficulty == 15)
+        {
+            targetScore = 215;
+            SetGoals(2);
+            candySpawnTime = 1.3f;
+            bonusCandySpawnTime = 22f;
+            candySpeed = 3.5f;
+        }
+        else if (difficulty == 16)
+        {
+            targetScore = 230;
+            SetGoals(4);
+            candySpawnTime = 1.2f;
+            bonusCandySpawnTime = 20.1f;
+            candySpeed = 3.5f;
+        }
+        else if (difficulty == 17)
+        {
+            targetScore = 245;
+            SetGoals(9);
+            candySpawnTime = 1.5f;
+            bonusCandySpawnTime = 20.1f;
+            candySpeed = 2.9f;
+        }
+        else if (difficulty == 18)
+        {
+            targetScore = 260;
+            SetGoals(10);
+            candySpawnTime = 1.4f;
+            bonusCandySpawnTime = 20.1f;
+            candySpeed = 3f;
+        }
+        else if (difficulty == 19)
+        {
+            targetScore = 275;
+            SetGoals(5);
+            candySpawnTime = 1.4f;
+            bonusCandySpawnTime = 20.1f;
+            candySpeed = 3f;
+        }
+        else if (difficulty == 20)
+        {
+            targetScore = 290;
+            SetGoals(11);
+            candySpawnTime = 1.2f;
+            bonusCandySpawnTime = 19.9f;
+            candySpeed = 2.9f;
+        }
+        else if (difficulty == 21)
+        {
+            targetScore = 305;
+            SetGoals(12);
+            candySpawnTime = 2f;
+            bonusCandySpawnTime = 20.1f;
+            candySpeed = 2.8f;
+        }
+        else if (difficulty == 22)
+        {
+            targetScore = 320;
+            SetGoals(2);
+            candySpawnTime = 1f;
+            bonusCandySpawnTime = 22f;
+            candySpeed = 2.9f;
+        }
+        else if (difficulty == 23)
+        {
+            targetScore = 335;
+            SetGoals(13);
+            candySpawnTime = 2.5f;
+            bonusCandySpawnTime = 23f;
+            candySpeed = 2.7f;
+        }
+        else if (difficulty == 24)
+        {
+            targetScore = 350;
+            SetGoals(14);
+            candySpawnTime = 3f;
+            bonusCandySpawnTime = 25f;
+            candySpeed = 1.9f;
+        }
+        else if (difficulty == 25)
+        {
+            targetScore = 100000;
+            SetGoals(15);
+            candySpawnTime = 1.9f;
+            bonusCandySpawnTime = 27f;
+            candySpeed = 1.8f;
         }
     }
 }

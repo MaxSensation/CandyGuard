@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public GameObject highScoreUI;    
     public GameObject[] candyBags;
     public static GameController instance = null;
+    public AudioSource gameMusic;
 
     private bool difficultyChangeActive = false;
     private int candiesActive = 0;
@@ -69,6 +70,7 @@ public class GameController : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         SetCandyBagColors();
+        gameMusic.volume = Options.instance.GetMusicVolume();
     }
 
     public int GetCandyTypesGroup()

@@ -5,15 +5,37 @@ using UnityEngine.UI;
 
 public class Options : MonoBehaviour
 {
-    public Slider MusicVolume;
-    public Slider EffectVolume;
+    public Slider musicVolume;
+    public Slider effectVolume;
+    public static Options instance = null;
+    private AudioSource menuMusic;
 
-    public AudioSource Music;
-    public AudioSource Effect;
-
-    void Update()
+    private void Start()
     {
-        Music.volume = MusicVolume.value;
-        Effect.volume = EffectVolume.value;
+        menuMusic = GetComponentInParent<AudioSource>();
+    }
+
+    public void Update()
+    {
+        Debug.Log(menuMusic.volume);
+        instance.menuMusic.volume = musicVolume.value;
+    } 
+
+    public float GetMusicVolume()
+    {
+        return musicVolume.value;
+    }
+
+    public float GetEffectVolume()
+    {
+        return effectVolume.value;
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
     }
 }

@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 90702983}
   - component: {fileID: 90702982}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,8 +263,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 87}
-  m_SizeDelta: {x: 807.9, y: 417.6}
+  m_AnchoredPosition: {x: 0, y: -12.1}
+  m_SizeDelta: {x: 807.9, y: 615.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90702982
 MonoBehaviour:
@@ -299,26 +299,26 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Head of Programming: Maximiliam Karlsson
+  m_Text: 'Programmer: Maximiliam Karlsson
 
-    Programming Assistants: Line Skaraas, Keziah Ferreira Dos Santos
+    Assisting programmers: Line Skaraas, Keziah Ferreira Dos Santos
 
 
-    Head of Graphics: Line Skaraas
+    Visual artist: Line Skaraas
 
     UI/UX: Line Skaraas, Maximiliam Karlsson
 
     Animation: Line Skaraas, Maximiliam Karlsson
 
 
-    Music: Keziah Ferreira Dos Santos
+    Composer: Keziah Ferreira Dos Santos
 
-    Assisting Music Producer: Line Skaraas
+    Studio assistant: Line Skaraas
 
     Sound FX: Keziah Ferreira Dos Santos
 
 
-    Alpha Tester: Elias Englund'
+    Alpha tester: Elias Englund'
 --- !u!222 &90702983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 116106241}
   - component: {fileID: 116106240}
   m_Layer: 0
-  m_Name: HighScoreText
+  m_Name: CreditsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1524,7 +1524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &307631500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2003,8 +2003,8 @@ RectTransform:
   m_Father: {fileID: 1114364918}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3799,7 +3799,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3816,7 +3816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.79704344, b: 0.7122642, a: 1}
+  m_Color: {r: 1, g: 0.79704344, b: 0.7122642, a: 0.78431374}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5570,7 +5570,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5587,7 +5587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.79704344, b: 0.7122642, a: 1}
+  m_Color: {r: 1, g: 0.79704344, b: 0.7122642, a: 0.78431374}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7017,8 +7017,8 @@ RectTransform:
   m_Father: {fileID: 1621726369}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7157,7 +7157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2086378877
 RectTransform:
   m_ObjectHideFlags: 0

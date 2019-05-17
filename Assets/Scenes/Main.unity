@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 198812004}
   - component: {fileID: 198812003}
   m_Layer: 5
-  m_Name: CandyText
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Candy:'
+  m_Text: 'Score:'
 --- !u!222 &198812004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -743,7 +743,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1437350911}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1973,7 +1973,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1437350911}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2493,7 +2493,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1437350911}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2766,10 +2766,10 @@ RectTransform:
   - {fileID: 1779517420}
   - {fileID: 862432233}
   - {fileID: 710833451}
-  - {fileID: 505323415}
   - {fileID: 1002032545}
   - {fileID: 1158434865}
   - {fileID: 7243389875144548056}
+  - {fileID: 505323415}
   - {fileID: 1513914612}
   - {fileID: 1852850236}
   - {fileID: 1787511015}
@@ -4557,7 +4557,7 @@ PrefabInstance:
     - target: {fileID: 3940459815595278307, guid: 4867d41b03002ce428aa1a76e3931a3b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9164941022266580540, guid: 4867d41b03002ce428aa1a76e3931a3b, type: 3}

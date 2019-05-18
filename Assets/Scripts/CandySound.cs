@@ -12,7 +12,7 @@ public class CandySound : MonoBehaviour
         if (colider.gameObject.tag == "Player")
         {
             audioSource = GetComponent<AudioSource>();
-            audioSource.volume = Options.instance.GetEffectVolume();
+            //audioSource.volume = Options.instance.GetEffectVolume();
             audioSource.clip = bouncSounds[Random.Range(0, bouncSounds.Length)];
             audioSource.Play();
         }

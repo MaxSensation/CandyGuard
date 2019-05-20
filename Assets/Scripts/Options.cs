@@ -18,7 +18,7 @@ public class Options : MonoBehaviour
     public void Update()
     {
         instance.menuMusic.volume = musicVolume.value;
-    } 
+    }
 
     public float GetMusicVolume()
     {

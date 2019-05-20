@@ -13,7 +13,6 @@ public class TargetScoreBar : MonoBehaviour
     private int currentScore = 0;
     private int targetScore = 10;
     private float procentage;
-    private float speed = 0.8f;
 
     void Start()
     {

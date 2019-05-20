@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce82d8b05b3e204a88f8b1b15c69ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 5
+  scrollSpeed: 1
   tileSizeZ: 60
 --- !u!1 &323954464
 GameObject:
@@ -3148,7 +3148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce82d8b05b3e204a88f8b1b15c69ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 5
+  scrollSpeed: 1
   tileSizeZ: 60
 --- !u!212 &1412404342
 SpriteRenderer:

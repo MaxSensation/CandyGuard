@@ -7,7 +7,7 @@ public class TargetScoreBar : MonoBehaviour
     private Transform barTransform;
 
     private float barZeroScale = 0f;    
-    private float barFullScale = 1f;    
+    private float barFullScale = 0.96f;    
     private int currentScore = 0;
     private int targetScore = 10;
     private float procentage;

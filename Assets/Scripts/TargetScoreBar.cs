@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class TargetScoreBar : MonoBehaviour
 {
-    private Transform bar;
+    private Transform barTransform;
 
-    private float barZeroPos = 0.45f;
-    private float barZeroScale = 0.001f;
-    private float barFullPos = 3.0f;
-    private float barFullScale = 1.0f;
+    private float barZeroScale = 0f;    
+    private float barFullScale = 1f;    
     private int currentScore = 0;
     private int targetScore = 10;
     private float procentage;
 
     void Start()
     {
-        bar = GameObject.Find("BarLaying").transform;
+        barTransform = GameObject.Find("ProgressionBarFront").transform;        
         ResetBar();
     }
 
@@ -40,13 +38,11 @@ public class TargetScoreBar : MonoBehaviour
 
     private void ResetBar()
     {
-        bar.localPosition = (new Vector3(bar.localPosition.x, barZeroPos, bar.localPosition.z));
-        bar.localScale = (new Vector3(barZeroScale, bar.localScale.y, bar.localScale.z));
+        barTransform.localScale = new Vector3(barZeroScale, 1, 1);        
     }
 
     private void UpdateBarByScaleAndPos()
-    {        
-        bar.localPosition = new Vector3(bar.localPosition.x, barFullPos * procentage, bar.localPosition.z);
-        bar.localScale = new Vector3(barFullScale * procentage, bar.localScale.y, bar.localScale.z);
+    {
+        barTransform.localScale = new Vector3(barFullScale * procentage, 1, 1);        
     }
 }

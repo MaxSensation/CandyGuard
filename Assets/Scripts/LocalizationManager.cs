@@ -40,9 +40,7 @@ public class LocalizationManager : MonoBehaviour
             for (int i = 0; i < loadedData.items.Length; i++)
             {
                 localizedText.Add(loadedData.items[i].key, loadedData.items[i].value);
-            }
-
-            Debug.Log("Data loaded, dictionary contains: " + localizedText.Count + " entries");
+            }            
             PlayerPrefs.SetString("lang", fileName);
             SceneManager.LoadScene("StartScreenMenu");
         }

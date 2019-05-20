@@ -101,9 +101,7 @@ public class LevelGenerator : MonoBehaviour
         if (levels.Capacity == 0)
         {
             return targetScoreDefault;
-        }
-                
-        Debug.Log(lastLevel.GetTargetScore() + targetScoreMulti);
+        }               
         return lastLevel.GetTargetScore() + targetScoreMulti;
     }
 

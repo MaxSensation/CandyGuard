@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class LocalizationManager : MonoBehaviour
 {
@@ -16,8 +17,8 @@ public class LocalizationManager : MonoBehaviour
     {
         if (instance == null)
         {
-            instance = this;
-            LoadLocalizedText("localizedText_en.json");
+            instance = this;                        
+            LoadLocalizedText(PlayerPrefs.GetString("lang", "localizedText_en.json"));
         }
         else if (instance != this)
         {
@@ -42,6 +43,8 @@ public class LocalizationManager : MonoBehaviour
             }
 
             Debug.Log("Data loaded, dictionary contains: " + localizedText.Count + " entries");
+            PlayerPrefs.SetString("lang", fileName);
+            SceneManager.LoadScene("StartScreenMenu");
         }
         else
         {

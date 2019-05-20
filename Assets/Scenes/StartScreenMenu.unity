@@ -4502,7 +4502,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 0636aa2044a811040974e7266a8a816a, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 4
@@ -7813,7 +7813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa213f5d91513bd468fc91225a072437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: play_endless
+  key: endless
 --- !u!1 &2086378876
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public AudioSource gameMusic;
     public GameObject targetBar;
 
+    private bool colorBlindModeActive = false;
     private TargetScoreBar scoreBar;
     private bool difficultyChangeActive = false;
     private int candiesActive = 0;
@@ -36,6 +37,16 @@ public class GameController : MonoBehaviour
         levelGenerator = GetComponent<LevelGenerator>();
         GenerateLevel();
         Cursor.visible = false;
+    }
+
+    public bool ColorBlindModeActive()
+    {
+        return colorBlindModeActive;
+    }
+
+    public void ColorBlindModeActive(bool mode)
+    {
+        colorBlindModeActive = mode;
     }
 
     private void GenerateLevel()

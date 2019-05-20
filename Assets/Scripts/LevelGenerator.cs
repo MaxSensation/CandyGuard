@@ -17,6 +17,12 @@ public class LevelGenerator : MonoBehaviour
 
     private ArrayList levels = new ArrayList();
     private Color32[] colors = {
+        new Color32(50, 50, 50, 255),
+        new Color32(100, 100, 100, 255),
+        new Color32(150, 150, 150, 255),
+        new Color32(200, 200, 200, 255)
+    };
+    private Color32[] blindColors = {
         new Color32(130, 255, 130, 255),
         new Color32(255, 100, 100, 255),
         new Color32(255, 175, 90, 255),
@@ -36,13 +42,22 @@ public class LevelGenerator : MonoBehaviour
 
     private Color32[] GenerateTopColors()
     {
-        topColors = new Color32[4]{
-            colors[Random.Range(0, colors.Length)],
-            colors[Random.Range(0, colors.Length)],
-            colors[Random.Range(0, colors.Length)],
-            colors[Random.Range(0, colors.Length)]
-        };
-
+        if (GameController.instance.ColorBlindModeActive())
+        {
+            topColors = new Color32[4]{
+                colors[Random.Range(0, colors.Length)],
+                colors[Random.Range(0, colors.Length)],
+                colors[Random.Range(0, colors.Length)],
+                colors[Random.Range(0, colors.Length)]
+            };
+         } else {
+            topColors = new Color32[4]{
+                blindColors[Random.Range(0, blindColors.Length)],
+                blindColors[Random.Range(0, blindColors.Length)],
+                blindColors[Random.Range(0, blindColors.Length)],
+                blindColors[Random.Range(0, blindColors.Length)]
+            };
+        }
         return topColors;
     }
 
@@ -57,8 +72,15 @@ public class LevelGenerator : MonoBehaviour
         Color32[] availableColors;
 
         for (int i = 0; i < bottomColors.Length; i++)
-        {            
-            availableColors = colors.Where(val => !val.Equals(topColors[i])).ToArray();
+        {
+            if (GameController.instance.ColorBlindModeActive())
+            {
+                availableColors = colors.Where(val => !val.Equals(topColors[i])).ToArray();
+            }
+            else
+            {
+                availableColors = blindColors.Where(val => !val.Equals(topColors[i])).ToArray();                
+            }            
             bottomColors[i] = availableColors[Random.Range(0, availableColors.Length - 1)];            
         }
         return bottomColors;

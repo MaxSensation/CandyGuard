@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce82d8b05b3e204a88f8b1b15c69ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 5
+  scrollSpeed: 1
   tileSizeZ: 60
 --- !u!1001 &353671169
 PrefabInstance:
@@ -1407,7 +1407,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 540533998055703324}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &774256701
+--- !u!114 &774256699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1419,7 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec8318db399c4e4498cef560add738d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScoreMulti: 3
+  targetScoreMulti: 15
   candySpawnTimeMulti: 0.9
   candySpeedMulti: 1.1
   bonusCandySpawnTimeMulti: 1.1
@@ -2958,7 +2958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce82d8b05b3e204a88f8b1b15c69ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 5
+  scrollSpeed: 1
   tileSizeZ: 60
 --- !u!212 &1412404342
 SpriteRenderer:

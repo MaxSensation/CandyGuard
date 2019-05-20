@@ -7,13 +7,12 @@ public class TargetScoreBar : MonoBehaviour
     private Transform bar;
 
     private float barZeroPos = 0.45f;
-    private float barZeroScale = 0.01f;
+    private float barZeroScale = 0.001f;
     private float barFullPos = 3.0f;
     private float barFullScale = 1.0f;
     private int currentScore = 0;
     private int targetScore = 10;
     private float procentage;
-    private float speed = 0.8f;
 
     void Start()
     {

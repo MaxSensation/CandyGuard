@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour
     }
 
     void Start()
-    {
+    {        
         scoreBar = targetBar.GetComponentInChildren<TargetScoreBar>();
         scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
         Application.targetFrameRate = 60;

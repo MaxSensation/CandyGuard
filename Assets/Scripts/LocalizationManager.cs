@@ -1,32 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
+using System.IO;
 
 public class LocalizationManager : MonoBehaviour
 {
+
     public static LocalizationManager instance;
 
     private Dictionary<string, string> localizedText;
     private bool isReady = false;
+    private string missingTextString = "Localized text not found";
 
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            LoadLocalizedText("localizedText_en.json");
         }
         else if (instance != this)
         {
             Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
+        }        
+        DontDestroyOnLoad(gameObject);        
     }
 
     public void LoadLocalizedText(string fileName)
     {
         localizedText = new Dictionary<string, string>();
         string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
+
         if (File.Exists(filePath))
         {
             string dataAsJson = File.ReadAllText(filePath);
@@ -41,13 +45,27 @@ public class LocalizationManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Cannot find file!");
+            Debug.LogError("Cannot find file!");
         }
+
         isReady = true;
+    }
+
+    public string GetLocalizedValue(string key)
+    {
+        string result = missingTextString;
+        if (localizedText.ContainsKey(key))
+        {
+            result = localizedText[key];
+        }
+
+        return result;
+
     }
 
     public bool GetIsReady()
     {
         return isReady;
     }
+
 }

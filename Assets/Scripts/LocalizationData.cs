@@ -1,7 +1,7 @@
-﻿public class LocalizationData
+﻿[System.Serializable]
+public class LocalizationData
 {
     public LocalizationItem[] items;
-
 }
 
 [System.Serializable]

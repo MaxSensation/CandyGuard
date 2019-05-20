@@ -8,6 +8,7 @@ TagManager:
   - Goal
   - Candies
   - Candy
+  - LocalizationManager
   layers:
   - Default
   - TransparentFX

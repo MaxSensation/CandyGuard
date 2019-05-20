@@ -36,7 +36,7 @@ public class CandySpawner : MonoBehaviour
     {
         if (GameController.instance.IsGameover() == false && GameController.instance.DifficultyChangeActive() == false)
         {
-            int candyType = GetCandyType();
+            int candyType = Random.Range(2, 5);
             Vector2 newPos = GetStartPosition();
             int lane = GetLane(newPos);
             GameObject candyObject;
@@ -65,15 +65,6 @@ public class CandySpawner : MonoBehaviour
             candyObject.GetComponentInChildren<SpriteRenderer>().sprite = SetCandyType(1);
             GameController.instance.AddActiveCandy();
         }
-    }
-
-    private int GetCandyType()
-    {
-        if (GameController.instance.GetCandyTypesGroup() == 1)
-        {
-            return Random.Range(2, 5);
-        }
-        return -1;
     }
 
     private Sprite SetCandyType(int candyType)

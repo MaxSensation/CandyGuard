@@ -14,7 +14,6 @@ public class GameController : MonoBehaviour
 
     private bool difficultyChangeActive = false;
     private int candiesActive = 0;
-    private int candyTypesGroup;
     private float candySpawnTime;
     private float bonusCandySpawnTime;
     private float candySpeed;
@@ -45,7 +44,6 @@ public class GameController : MonoBehaviour
     private void UpdateLevel(Level level)
     {
         currentLevel = level;
-        candyTypesGroup = 1;
         levelText.text = level.GetLevelNumber().ToString();
         targetScore = level.GetTargetScore();
         topColors = level.GetTopColors();
@@ -90,11 +88,6 @@ public class GameController : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         SetCandyBagColors();
-    }
-
-    public int GetCandyTypesGroup()
-    {
-        return candyTypesGroup;
     }
 
     public float GetCandySpawnTime()

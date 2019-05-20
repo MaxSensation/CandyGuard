@@ -11,7 +11,9 @@ public class GameController : MonoBehaviour
     public GameObject[] candyBags;
     public static GameController instance = null;
     public AudioSource gameMusic;
+    public GameObject targetBar;
 
+    private TargetScoreBar scoreBar;
     private bool difficultyChangeActive = false;
     private int candiesActive = 0;
     private float candySpawnTime;
@@ -86,6 +88,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        scoreBar = targetBar.GetComponentInChildren<TargetScoreBar>();
+        scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
         Application.targetFrameRate = 60;
         SetCandyBagColors();
     }
@@ -153,8 +157,9 @@ public class GameController : MonoBehaviour
     }
 
     public void AddScore(int points)
-    {
+    {        
         currentScore += points;
+        scoreBar.UpdateBar(currentScore);
         scoreText.text = currentScore.ToString();
         if (currentScore >= targetScore)
         {
@@ -176,6 +181,7 @@ public class GameController : MonoBehaviour
         SetCandyBagColors();        
         AddSparklesToAllBags();
         difficultyChangeActive = false;
+        scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
     }
 
     public void GameOver()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     private readonly int startLevelNumberDefault = 1;
-    private readonly int targetScoreDefault = 5;
+    private readonly int targetScoreDefault = 10;
     private readonly float candySpawnTimeDefault = 3f;
     private readonly float candySpeedDefault = 2f;
     private readonly float bonusCandySpawnTimeDefault = 20f;
@@ -80,7 +80,7 @@ public class LevelGenerator : MonoBehaviour
         {
             return targetScoreDefault;
         }
-        
+        Debug.Log(lastLevel.GetTargetScore() + targetScoreMulti + lastLevel.GetLevelNumber() * 2);
         return lastLevel.GetTargetScore() + targetScoreMulti + lastLevel.GetLevelNumber() * 2;
     }
 

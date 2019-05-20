@@ -2,7 +2,6 @@
 
 public class PlayerControls : MonoBehaviour
 {
-    public float speed = 20.0f;
     private Rigidbody2D rb;
 
     void Start()
@@ -28,12 +27,12 @@ public class PlayerControls : MonoBehaviour
             {
                 Vector2 touchedPos = Camera.main.ScreenToWorldPoint(new Vector2(Input.GetTouch(0).position.x, transform.position.y));
                 touchedPos.y = transform.position.y;
-                transform.position = Vector2.Lerp(transform.position, touchedPos, Time.deltaTime * speed);
+                transform.position = touchedPos;
             }
         }
         //DEBUG PC
         Vector2 pos = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, transform.position.y));
         pos.y = transform.position.y;
-        transform.position = Vector2.Lerp(transform.position, pos, Time.deltaTime * speed);
+        transform.position = pos;
     }
 }

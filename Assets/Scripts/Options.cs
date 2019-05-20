@@ -17,7 +17,6 @@ public class Options : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(menuMusic.volume);
         instance.menuMusic.volume = musicVolume.value;
     } 
 

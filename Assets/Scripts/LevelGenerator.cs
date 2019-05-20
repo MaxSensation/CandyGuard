@@ -9,6 +9,11 @@ public class LevelGenerator : MonoBehaviour
     private readonly float candySpawnTimeDefault = 3f;
     private readonly float candySpeedDefault = 2f;
     private readonly float bonusCandySpawnTimeDefault = 20f;
+    
+    private readonly int targetScoreMulti = 3;
+    private readonly float candySpawnTimeMulti = 0.9f;
+    private readonly float candySpeedMulti = 1.1f;
+    private readonly float bonusCandySpawnTimeMulti = 1.1f;
 
     private ArrayList levels = new ArrayList();
     private Color32[] colors = {
@@ -90,7 +95,7 @@ public class LevelGenerator : MonoBehaviour
             return targetScoreDefault;
         }
         
-        return lastLevel.GetTargetScore() * 3;
+        return lastLevel.GetTargetScore() * targetScoreMulti;
     }
 
     private float GenerateCandySpawnTime()
@@ -99,7 +104,7 @@ public class LevelGenerator : MonoBehaviour
         {
             return candySpawnTimeDefault;
         }
-        return lastLevel.GetCandySpawnTime() * 0.9f;
+        return lastLevel.GetCandySpawnTime() * candySpawnTimeMulti;
     }
 
     private float GenerateCandySpeed()
@@ -108,7 +113,7 @@ public class LevelGenerator : MonoBehaviour
         {
             return candySpeedDefault;
         }
-        return lastLevel.GetCandySpawnTime() * 1.1f;
+        return lastLevel.GetCandySpeed() * candySpeedMulti;
     }
 
     private float GenerateBonusCandySpawnTime()
@@ -117,6 +122,6 @@ public class LevelGenerator : MonoBehaviour
         {
             return bonusCandySpawnTimeDefault;
         }
-        return lastLevel.GetCandySpawnTime() * 1.1f;
+        return lastLevel.GetCandySpawnTime() * bonusCandySpawnTimeMulti;
     }
 }

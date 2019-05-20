@@ -6,7 +6,7 @@ public class TargetScoreBar : MonoBehaviour
 {
     private Transform bar;
 
-    private float barZeroPos = 0.5f;
+    private float barZeroPos = 0.45f;
     private float barZeroScale = 0.01f;
     private float barFullPos = 3.0f;
     private float barFullScale = 1.0f;

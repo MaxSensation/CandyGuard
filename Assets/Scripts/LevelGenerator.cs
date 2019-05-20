@@ -34,20 +34,6 @@ public class LevelGenerator : MonoBehaviour
         return level;
     }    
 
-    public void PrintTest()
-    {        
-        foreach(Level level in levels)
-        {            
-            Debug.Log(level.GetLevelNumber());
-            Debug.Log(level.GetTopColors());
-            Debug.Log(level.GetBottomColors());
-            Debug.Log(level.GetTargetScore());
-            Debug.Log(level.GetCandySpawnTime());
-            Debug.Log(level.GetCandySpeed());
-            Debug.Log(level.GetBonusCandySpawnTime());
-        }
-    }
-
     private Color32[] GenerateTopColors()
     {
         topColors = new Color32[4]{

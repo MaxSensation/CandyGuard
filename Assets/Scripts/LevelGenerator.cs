@@ -10,10 +10,10 @@ public class LevelGenerator : MonoBehaviour
     private readonly float candySpeedDefault = 2f;
     private readonly float bonusCandySpawnTimeDefault = 20f;
     
-    private readonly int targetScoreMulti = 3;
-    private readonly float candySpawnTimeMulti = 0.9f;
-    private readonly float candySpeedMulti = 1.1f;
-    private readonly float bonusCandySpawnTimeMulti = 1.1f;
+    public int targetScoreMulti = 3;
+    public float candySpawnTimeMulti = 0.9f;
+    public float candySpeedMulti = 1.1f;
+    public float bonusCandySpawnTimeMulti = 1.1f;
 
     private ArrayList levels = new ArrayList();
     private Color32[] colors = {

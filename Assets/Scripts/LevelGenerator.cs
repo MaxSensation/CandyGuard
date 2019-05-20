@@ -5,11 +5,11 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     private readonly int startLevelNumberDefault = 1;
-    private readonly int targetScoreDefault = 10;
+    private readonly int targetScoreDefault = 5;
     private readonly float candySpawnTimeDefault = 3f;
     private readonly float candySpeedDefault = 2f;
     private readonly float bonusCandySpawnTimeDefault = 20f;
-    
+
     public int targetScoreMulti = 15;
     public float candySpawnTimeMulti = 0.9f;
     public float candySpeedMulti = 1.1f;
@@ -21,7 +21,7 @@ public class LevelGenerator : MonoBehaviour
         new Color32(255, 100, 100, 255),
         new Color32(255, 175, 90, 255),
         new Color32(255, 250, 110, 255)
-    };    
+    };
     private Color32[] topColors;
     private Color32[] bottomColors;
     private Level lastLevel;
@@ -80,8 +80,9 @@ public class LevelGenerator : MonoBehaviour
         {
             return targetScoreDefault;
         }
-        Debug.Log(lastLevel.GetTargetScore() + targetScoreMulti + lastLevel.GetLevelNumber() * 2);
-        return lastLevel.GetTargetScore() + targetScoreMulti + lastLevel.GetLevelNumber() * 2;
+                
+        Debug.Log(lastLevel.GetTargetScore() + targetScoreMulti);
+        return lastLevel.GetTargetScore() + targetScoreMulti;
     }
 
     private float GenerateCandySpawnTime()

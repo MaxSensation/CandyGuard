@@ -1407,7 +1407,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 540533998055703324}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &774256701
+--- !u!114 &774256699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1419,7 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec8318db399c4e4498cef560add738d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScoreMulti: 3
+  targetScoreMulti: 15
   candySpawnTimeMulti: 0.9
   candySpeedMulti: 1.1
   bonusCandySpawnTimeMulti: 1.1

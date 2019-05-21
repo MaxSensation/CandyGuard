@@ -167,6 +167,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13140471}
   m_CullTransparentMesh: 0
+--- !u!1 &28098620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28098621}
+  - component: {fileID: 28098622}
+  m_Layer: 0
+  m_Name: BackgroundScroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &28098621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28098620}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2970.2214, y: -3337.526, z: 943132860}
+  m_LocalScale: {x: 191.61288, y: 191.61288, z: 191.61288}
+  m_Children:
+  - {fileID: 318012686}
+  - {fileID: 1412404340}
+  m_Father: {fileID: 1437350911}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28098622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28098620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dce82d8b05b3e204a88f8b1b15c69ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  sprites:
+  - {fileID: 318012687}
+  - {fileID: 1412404342}
+  Dir: 0
 --- !u!1 &180832866
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +552,6 @@ GameObject:
   m_Component:
   - component: {fileID: 318012686}
   - component: {fileID: 318012687}
-  - component: {fileID: 318012688}
   m_Layer: 0
   m_Name: Backgroundgradient
   m_TagString: Untagged
@@ -518,12 +567,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318012685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -2391, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 192.34286}
-  m_Children:
-  - {fileID: 1412404340}
-  m_Father: {fileID: 1437350911}
-  m_RootOrder: 1
+  m_LocalPosition: {x: 15.511596, y: 4.939782, z: -4922074.5}
+  m_LocalScale: {x: 0.5218856, y: 0.5218856, z: 1.0038097}
+  m_Children: []
+  m_Father: {fileID: 28098621}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &318012687
 SpriteRenderer:
@@ -573,20 +621,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &318012688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318012685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dce82d8b05b3e204a88f8b1b15c69ac5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: 1
-  tileSizeZ: 60
 --- !u!1001 &353671169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3072,9 +3106,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1412404340}
   - component: {fileID: 1412404342}
-  - component: {fileID: 1412404341}
   m_Layer: 0
-  m_Name: BackgroundgradientChild
+  m_Name: Backgroundgradient(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3088,26 +3121,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412404339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -66.86, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 15.5115, y: -29.9386, z: -4922074.5}
+  m_LocalScale: {x: 0.5218856, y: 0.5218856, z: 1.0038097}
   m_Children: []
-  m_Father: {fileID: 318012686}
-  m_RootOrder: 0
+  m_Father: {fileID: 28098621}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1412404341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412404339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dce82d8b05b3e204a88f8b1b15c69ac5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: 1
-  tileSizeZ: 60
 --- !u!212 &1412404342
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3247,7 +3266,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1779517420}
-  - {fileID: 318012686}
+  - {fileID: 28098621}
   - {fileID: 710833451}
   - {fileID: 1002032545}
   - {fileID: 1158434865}

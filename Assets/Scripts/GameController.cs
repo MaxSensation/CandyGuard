@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     private Level currentLevel;
     private LevelGenerator levelGenerator;
     private string currentGameMode;
-    private float timeLeft = 10;    
+    private float timeLeft = 60;    
 
     void Awake()
     {
@@ -65,14 +65,13 @@ public class GameController : MonoBehaviour
         GameObject[] timedUIs = GameObject.FindGameObjectsWithTag("Timed");
         foreach (GameObject endlessUi in endlessUIs)
         {
-            Debug.Log(endlessUi.name);
             endlessUi.SetActive(false); ;
         }
         foreach (GameObject timedUi in timedUIs)
         {
-            Debug.Log(timedUi.name);
             timedUi.SetActive(true);
         }
+        gameoverUI.SetActive(false);
     }
 
     private void ConvertToEndless()
@@ -81,14 +80,13 @@ public class GameController : MonoBehaviour
         GameObject[] timedUIs = GameObject.FindGameObjectsWithTag("Timed");
         foreach (GameObject endlessUi in endlessUIs)
         {
-            Debug.Log(endlessUi.name);
             endlessUi.SetActive(true); ;
         }
         foreach (GameObject timedUi in timedUIs)
         {
-            Debug.Log(timedUi.name);
             timedUi.SetActive(false);
         }
+        gameoverUI.SetActive(false);
     }
 
     public bool ColorBlindModeActive()
@@ -270,12 +268,24 @@ public class GameController : MonoBehaviour
     {
         gameover = true;
         gameoverUI.SetActive(true);
-        if (currentScore > PlayerPrefs.GetInt("HighScore", 0))
+        if (currentGameMode == "Endless")
         {
-            PlayerPrefs.SetInt("HighScore", currentScore);
-            highScoreUI.transform.Find("ScoreText").GetComponent<Text>().text = currentScore.ToString();
-            highScoreUI.SetActive(true);            
+            if (currentScore > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", currentScore);
+                highScoreUI.transform.Find("ScoreText").GetComponent<Text>().text = currentScore.ToString();
+                highScoreUI.SetActive(true);
+            }
         }
+        else
+        {
+            if (currentScore > PlayerPrefs.GetInt("TimedHighScore", 0))
+            {
+                PlayerPrefs.SetInt("TimedHighScore", currentScore);
+                highScoreUI.transform.Find("ScoreText").GetComponent<Text>().text = currentScore.ToString();
+                highScoreUI.SetActive(true);
+            }
+        }    
     }
 
     public void AddSparklesToAllBags()

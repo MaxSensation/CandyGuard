@@ -6064,8 +6064,8 @@ GameObject:
   - component: {fileID: 1494894504}
   - component: {fileID: 1494894507}
   - component: {fileID: 1494894506}
-  - component: {fileID: 1494894505}
   - component: {fileID: 1494894508}
+  - component: {fileID: 1494894505}
   m_Layer: 0
   m_Name: Score
   m_TagString: Untagged
@@ -6101,7 +6101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1494894503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac9600659c0d736408fb50d94deca076, type: 3}
+  m_Script: {fileID: 11500000, guid: ed37a8f607497bd4ca688ea3597d99d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1494894506

@@ -9,20 +9,14 @@ public class Options : MonoBehaviour
     public Slider effectVolume;
     public static Options instance = null;
     private AudioSource menuMusic;
-    private bool colorBlindMode = false;
     private string gameMode;
 
     private void Start()
     {
         menuMusic = GetComponentInParent<AudioSource>();
 
-        if (PlayerPrefs.GetInt("ColorBlind", 0) == 0)
-            colorBlindMode = false;
-        else
-        {
-            colorBlindMode = true;
+        if (PlayerPrefs.GetInt("ColorBlind", 0) == 1)
             GameObject.Find("ColorblindmodeToggle").GetComponent<Toggle>().isOn = true;
-        }            
     }
 
     public void Update()

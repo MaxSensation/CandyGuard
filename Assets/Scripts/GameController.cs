@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
     private Color32[] bottomColors;
     private Level currentLevel;
     private LevelGenerator levelGenerator;
+    private string currentGameMode;
 
     void Awake()
     {
@@ -96,13 +97,21 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        colorBlindModeActive = Options.instance.IsColorBlindMode();
+        //currentGameMode = Options.instance.GetGameMode();
+        if (PlayerPrefs.GetInt("ColorBlind", 0) == 0)
+        {
+            ColorBlindModeActive(false);
+        }
+        else
+        {
+            ColorBlindModeActive(true);
+        }        
         levelGenerator = GetComponent<LevelGenerator>();
         GenerateLevel();        
         scoreBar = targetBar.GetComponentInChildren<TargetScoreBar>();
         scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
         Application.targetFrameRate = 60;
-        SetCandyBagColors();
+        SetCandyBagColors();        
     }
 
     public float GetCandySpawnTime()

@@ -10,6 +10,7 @@ public class Options : MonoBehaviour
     public static Options instance = null;
     private AudioSource menuMusic;
     private bool colorBlindMode = false;
+    private string gameMode;
 
     private void Start()
     {
@@ -22,6 +23,15 @@ public class Options : MonoBehaviour
             colorBlindMode = true;
             GameObject.Find("ColorblindmodeToggle").GetComponent<Toggle>().isOn = true;
         }            
+    }
+
+    public void GameMode(string mode)
+    {
+        gameMode = mode;
+    }
+
+    public string GetGameMode() {
+        return gameMode;
     }
 
     public void Update()
@@ -47,14 +57,8 @@ public class Options : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public bool IsColorBlindMode()
-    {
-        return colorBlindMode;
-    }
-
     public void SetColorBlindMode(bool toggle)
-    {
-        colorBlindMode = toggle;
+    {     
         if (toggle == true)
         {
             PlayerPrefs.SetInt("ColorBlind", 1);

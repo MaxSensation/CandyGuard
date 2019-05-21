@@ -8,7 +8,6 @@ public class LocalizationManager : MonoBehaviour
 {
 
     public static LocalizationManager instance;
-
     private Dictionary<string, string> localizedText;
     private bool isReady = false;
     private string missingTextString = "Localized text not found";
@@ -17,39 +16,72 @@ public class LocalizationManager : MonoBehaviour
     {
         if (instance == null)
         {
-            instance = this;                        
-            LoadLocalizedText(PlayerPrefs.GetString("lang", "localizedText_en.json"));
+            instance = this;
+            SetLanguage(PlayerPrefs.GetString("lang", "localizedText_en.json"));
         }
         else if (instance != this)
         {
             Destroy(gameObject);
-        }        
-        DontDestroyOnLoad(gameObject);        
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     public void LoadLocalizedText(string fileName)
     {
         localizedText = new Dictionary<string, string>();
-        string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
+        string filePath = Path.Combine(Application.streamingAssetsPath + "/", fileName);
 
         if (File.Exists(filePath))
         {
             string dataAsJson = File.ReadAllText(filePath);
             LocalizationData loadedData = JsonUtility.FromJson<LocalizationData>(dataAsJson);
-
             for (int i = 0; i < loadedData.items.Length; i++)
             {
                 localizedText.Add(loadedData.items[i].key, loadedData.items[i].value);
-            }            
-            PlayerPrefs.SetString("lang", fileName);
-            SceneManager.LoadScene("StartScreenMenu");
+            }
         }
         else
         {
-            Debug.LogError("Cannot find file!");
+            Debug.LogError("Cannot find file! named" + fileName);
         }
-
         isReady = true;
+        SceneManager.LoadScene("StartScreenMenu");
+    }
+
+    IEnumerator LoadLocalizedTextOnAndroid(string fileName)
+    {
+        localizedText = new Dictionary<string, string>();
+        string filePath;
+        filePath = Path.Combine(Application.streamingAssetsPath + "/", fileName);
+        string dataAsJson;
+        if (filePath.Contains("://") || filePath.Contains(":///"))
+        {
+            UnityEngine.Networking.UnityWebRequest www = UnityEngine.Networking.UnityWebRequest.Get(filePath);
+            yield return www.SendWebRequest();
+            dataAsJson = www.downloadHandler.text;
+        }
+        else
+        {
+            dataAsJson = File.ReadAllText(filePath);
+        }
+        LocalizationData loadedData = JsonUtility.FromJson<LocalizationData>(dataAsJson);
+        for (int i = 0; i < loadedData.items.Length; i++)
+        {
+            localizedText.Add(loadedData.items[i].key, loadedData.items[i].value);
+        }
+        isReady = true;
+        SceneManager.LoadScene("StartScreenMenu");
+    }
+
+    public void SetLanguage(string fileName)
+    {
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+            LoadLocalizedText(fileName);
+        else if (Application.platform == RuntimePlatform.OSXEditor)
+            LoadLocalizedText(fileName);
+        else if (Application.platform == RuntimePlatform.Android)
+            StartCoroutine("LoadLocalizedTextOnAndroid", fileName);
+        PlayerPrefs.SetString("lang", fileName);        
     }
 
     public string GetLocalizedValue(string key)
@@ -59,14 +91,11 @@ public class LocalizationManager : MonoBehaviour
         {
             result = localizedText[key];
         }
-
         return result;
-
     }
 
     public bool GetIsReady()
     {
         return isReady;
     }
-
 }

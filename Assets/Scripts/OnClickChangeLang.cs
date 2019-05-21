@@ -14,6 +14,6 @@ public class OnClickChangeLang : MonoBehaviour
 
     public void changeLang(string path)
     {
-        lm.LoadLocalizedText(path);
+        lm.SetLanguage(path);
     }
 }

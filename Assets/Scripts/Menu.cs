@@ -8,12 +8,12 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
-        //Options.instance.GameMode("Endless");
+        PlayerPrefs.SetString("GameMode", "Endless");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);        
     }
     public void PlayTimedGame()
     {
-        //Options.instance.GameMode("Timed");
+        PlayerPrefs.SetString("GameMode", "Timed");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

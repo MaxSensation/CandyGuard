@@ -25,15 +25,6 @@ public class Options : MonoBehaviour
         }            
     }
 
-    public void GameMode(string mode)
-    {
-        gameMode = mode;
-    }
-
-    public string GetGameMode() {
-        return gameMode;
-    }
-
     public void Update()
     {
         instance.menuMusic.volume = musicVolume.value;
@@ -54,7 +45,7 @@ public class Options : MonoBehaviour
         if (instance == null)
             instance = this;
         else if (instance != this)
-            Destroy(gameObject);
+            Destroy(gameObject);        
     }
 
     public void SetColorBlindMode(bool toggle)

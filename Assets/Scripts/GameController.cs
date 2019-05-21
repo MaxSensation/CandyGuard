@@ -34,7 +34,18 @@ public class GameController : MonoBehaviour
         if (instance == null)
             instance = this;
         else if (instance != this)
-            Destroy(gameObject);        
+            Destroy(gameObject);
+        currentGameMode = PlayerPrefs.GetString("GameMode", "");
+        if (PlayerPrefs.GetInt("ColorBlind", 0) == 0)
+        {
+            ColorBlindModeActive(false);
+        }
+        else
+        {
+            ColorBlindModeActive(true);
+        }
+        levelGenerator = GetComponent<LevelGenerator>();
+        GenerateLevel();
     }
 
     public bool ColorBlindModeActive()
@@ -96,18 +107,7 @@ public class GameController : MonoBehaviour
     }
 
     void Start()
-    {
-        //currentGameMode = Options.instance.GetGameMode();
-        if (PlayerPrefs.GetInt("ColorBlind", 0) == 0)
-        {
-            ColorBlindModeActive(false);
-        }
-        else
-        {
-            ColorBlindModeActive(true);
-        }        
-        levelGenerator = GetComponent<LevelGenerator>();
-        GenerateLevel();        
+    {                
         scoreBar = targetBar.GetComponentInChildren<TargetScoreBar>();
         scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
         Application.targetFrameRate = 60;

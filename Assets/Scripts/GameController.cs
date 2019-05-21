@@ -33,10 +33,7 @@ public class GameController : MonoBehaviour
         if (instance == null)
             instance = this;
         else if (instance != this)
-            Destroy(gameObject);
-        levelGenerator = GetComponent<LevelGenerator>();
-        GenerateLevel();
-        Cursor.visible = false;
+            Destroy(gameObject);        
     }
 
     public bool ColorBlindModeActive()
@@ -98,7 +95,10 @@ public class GameController : MonoBehaviour
     }
 
     void Start()
-    {        
+    {
+        colorBlindModeActive = Options.instance.IsColorBlindMode();
+        levelGenerator = GetComponent<LevelGenerator>();
+        GenerateLevel();        
         scoreBar = targetBar.GetComponentInChildren<TargetScoreBar>();
         scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
         Application.targetFrameRate = 60;

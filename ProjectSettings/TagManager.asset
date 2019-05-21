@@ -9,6 +9,8 @@ TagManager:
   - Candies
   - Candy
   - LocalizationManager
+  - Endless
+  - Timed
   layers:
   - Default
   - TransparentFX

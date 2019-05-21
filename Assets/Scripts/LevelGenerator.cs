@@ -4,16 +4,36 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    private readonly int startLevelNumberDefault = 1;
-    private readonly int targetScoreDefault = 5;
-    private readonly float candySpawnTimeDefault = 3f;
-    private readonly float candySpeedDefault = 2f;
-    private readonly float bonusCandySpawnTimeDefault = 20f;
+    private int startLevelNumberDefault = 1;
+    private int targetScoreDefault = 5;
+    private float candySpawnTimeDefault = 3f;
+    private float candySpeedDefault = 2f;
+    private float bonusCandySpawnTimeDefault = 20f;
 
     public int targetScoreMulti = 15;
     public float candySpawnTimeMulti = 0.9f;
     public float candySpeedMulti = 1.1f;
     public float bonusCandySpawnTimeMulti = 1.1f;
+
+    public void Awake()
+    {        
+        if (PlayerPrefs.GetString("GameMode", "") == "Endless")
+        {
+            startLevelNumberDefault = 1;
+            targetScoreDefault = 5;
+            candySpawnTimeDefault = 3f;
+            candySpeedDefault = 2f;
+            bonusCandySpawnTimeDefault = 20f;
+        }
+        else
+        {
+            startLevelNumberDefault = 1;
+            targetScoreDefault = 10000;
+            candySpawnTimeDefault = 0.5f;
+            candySpeedDefault = 3f;
+            bonusCandySpawnTimeDefault = 15f;
+        }
+    }
 
     private ArrayList levels = new ArrayList();
     private Color32[] colors = {

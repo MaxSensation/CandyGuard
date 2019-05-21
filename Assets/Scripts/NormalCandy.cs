@@ -33,7 +33,10 @@ public class NormalCandy : Candy
                 }
                 else
                 {
-                    GameController.instance.GameOver();
+                    if (PlayerPrefs.GetString("GameMode", "") == "Endless")
+                    {
+                        GameController.instance.GameOver();
+                    }                    
                 }            
             }
             else
@@ -45,7 +48,10 @@ public class NormalCandy : Candy
                 }
                 else
                 {
-                    GameController.instance.GameOver();
+                    if (PlayerPrefs.GetString("GameMode", "") == "Endless")
+                    {
+                        GameController.instance.GameOver();
+                    }
                 }
             }
             Destroy(gameObject);

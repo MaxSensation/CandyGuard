@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {    
     public Text scoreText;
+    public Text timeleftText;
     public Text levelText;
     public GameObject gameoverUI;
     public GameObject highScoreUI;    
@@ -28,6 +30,7 @@ public class GameController : MonoBehaviour
     private Level currentLevel;
     private LevelGenerator levelGenerator;
     private string currentGameMode;
+    private float timeLeft = 10;    
 
     void Awake()
     {
@@ -35,7 +38,7 @@ public class GameController : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
-        currentGameMode = PlayerPrefs.GetString("GameMode", "");
+        currentGameMode = PlayerPrefs.GetString("GameMode", "");        
         if (PlayerPrefs.GetInt("ColorBlind", 0) == 0)
         {
             ColorBlindModeActive(false);
@@ -44,8 +47,48 @@ public class GameController : MonoBehaviour
         {
             ColorBlindModeActive(true);
         }
+        if (currentGameMode == "Timed")
+        {
+            ConvertToTimed();
+        }
+        else
+        {
+            ConvertToEndless();
+        }
         levelGenerator = GetComponent<LevelGenerator>();
         GenerateLevel();
+    }
+
+    private void ConvertToTimed()
+    {
+        GameObject[] endlessUIs = GameObject.FindGameObjectsWithTag("Endless");
+        GameObject[] timedUIs = GameObject.FindGameObjectsWithTag("Timed");
+        foreach (GameObject endlessUi in endlessUIs)
+        {
+            Debug.Log(endlessUi.name);
+            endlessUi.SetActive(false); ;
+        }
+        foreach (GameObject timedUi in timedUIs)
+        {
+            Debug.Log(timedUi.name);
+            timedUi.SetActive(true);
+        }
+    }
+
+    private void ConvertToEndless()
+    {
+        GameObject[] endlessUIs = GameObject.FindGameObjectsWithTag("Endless");
+        GameObject[] timedUIs = GameObject.FindGameObjectsWithTag("Timed");
+        foreach (GameObject endlessUi in endlessUIs)
+        {
+            Debug.Log(endlessUi.name);
+            endlessUi.SetActive(true); ;
+        }
+        foreach (GameObject timedUi in timedUIs)
+        {
+            Debug.Log(timedUi.name);
+            timedUi.SetActive(false);
+        }
     }
 
     public bool ColorBlindModeActive()
@@ -181,18 +224,37 @@ public class GameController : MonoBehaviour
         currentScore += points;
         scoreBar.UpdateBar(currentScore);
         scoreText.text = currentScore.ToString();
-        if (currentScore >= targetScore)
+        if (currentScore >= targetScore && currentGameMode == "Endless")
         {
             difficultyChangeActive = true;
         }
     }
 
+    public string GetGameMode()
+    {
+        return currentGameMode;
+    }
+
     void Update()
     {
-        if (difficultyChangeActive && candiesActive == 0)
+        if (difficultyChangeActive && candiesActive == 0 && currentGameMode == "Endless")
         {            
             IncreaseDifficulty();
         }
+        if (currentGameMode == "Timed" && gameover == false)
+        {
+            timeLeft -= Time.deltaTime;
+            timeleftText.text = ((int)Math.Round(timeLeft)).ToString();
+            if (timeLeft < 0)
+            {
+                GameOver();
+            }
+        }
+    }
+
+    public float GetTimeLeft()
+    {
+        return timeLeft;
     }
 
     private void IncreaseDifficulty()

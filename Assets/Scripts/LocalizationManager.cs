@@ -8,9 +8,9 @@ public class LocalizationManager : MonoBehaviour
 {
 
     public static LocalizationManager instance;
-    private Dictionary<string, string> localizedText;
+    private Dictionary<string, string> localizedText;    
+    private readonly string missingTextString = "Text Missing";
     private bool isReady = false;
-    private string missingTextString = "Localized text not found";
 
     void Awake()
     {
@@ -30,7 +30,6 @@ public class LocalizationManager : MonoBehaviour
     {
         localizedText = new Dictionary<string, string>();
         string filePath = Path.Combine(Application.streamingAssetsPath + "/", fileName);
-
         if (File.Exists(filePath))
         {
             string dataAsJson = File.ReadAllText(filePath);
@@ -42,7 +41,7 @@ public class LocalizationManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Cannot find file! named" + fileName);
+            Debug.LogError("File not found: " + fileName + "!");
         }
         isReady = true;
         SceneManager.LoadScene("StartScreenMenu");
@@ -64,7 +63,7 @@ public class LocalizationManager : MonoBehaviour
         {
             dataAsJson = File.ReadAllText(filePath);
         }
-        LocalizationData loadedData = JsonUtility.FromJson<LocalizationData>(dataAsJson);
+        LocalizationData loadedData = JsonUtility.FromJson<LocalizationData>(dataAsJson);        
         for (int i = 0; i < loadedData.items.Length; i++)
         {
             localizedText.Add(loadedData.items[i].key, loadedData.items[i].value);
@@ -75,9 +74,7 @@ public class LocalizationManager : MonoBehaviour
 
     public void SetLanguage(string fileName)
     {
-        if (Application.platform == RuntimePlatform.WindowsEditor)
-            LoadLocalizedText(fileName);
-        else if (Application.platform == RuntimePlatform.OSXEditor)
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)            
             LoadLocalizedText(fileName);
         else if (Application.platform == RuntimePlatform.Android)
             StartCoroutine("LoadLocalizedTextOnAndroid", fileName);

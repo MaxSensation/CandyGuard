@@ -121,6 +121,18 @@ public class GameController : MonoBehaviour
         return gameover;
     }
 
+    public bool IsPaused()
+    {
+        if (Time.timeScale == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
     public void Restart()
     {

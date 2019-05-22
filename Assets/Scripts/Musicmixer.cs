@@ -1,38 +1,48 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Musicmixer : MonoBehaviour
+public class MusicMixer : MonoBehaviour
 {
-    public static Musicmixer instance = null;
-    private AudioSource aud;
-    public AudioClip clip1;
-    public AudioClip clip2;
+    public static MusicMixer instance = null;
+    private AudioSource music;
+    public AudioClip menuMusic;    
+    public AudioClip endlessModeMusic;
+    public AudioClip timedModeMusic;
 
     private void Awake()
     {
         if (instance == null)
-            instance = this;
+            instance = this;        
         else if (instance != this)
             Destroy(gameObject);
+        DontDestroyOnLoad(GameObject.Find("SoundMixer"));
     }
 
-    private void Start()
+    public void Start()
     {
-        aud = GetComponent<AudioSource>();
-        aud.volume = PlayerPrefs.GetFloat("MusicVolume", 1);
-        if (PlayerPrefs.GetString("GameMode", "") == "Endless")
-        {
-            aud.clip = clip1; 
-        }
-        if (PlayerPrefs.GetString("GameMode", "") == "Timed") {
-
-            aud.clip = clip2; 
-
-        }
-
-        aud.Play();
+        music = GetComponent<AudioSource>();
+        music.volume = PlayerPrefs.GetFloat("MusicVolume", 1);
     }
 
-   
+    public void PlayEndlessModeMusic()
+    {
+        music.clip = endlessModeMusic;
+        music.Play();
+    }
+
+    public void PlayTimedModeMusic()
+    {
+        music.clip = timedModeMusic;
+        music.Play();
+    }
+
+    public void PlayMenuMusic()
+    {
+        music.clip = timedModeMusic;
+        music.Play();
+    }
+
+    public void SetVolume(float volume)
+    {
+        music.volume = volume;
+    }
 }

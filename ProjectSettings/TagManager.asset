@@ -11,6 +11,9 @@ TagManager:
   - LocalizationManager
   - Endless
   - Timed
+  - SoundMixer
+  - EffectMixer
+  - MusicMixer
   layers:
   - Default
   - TransparentFX

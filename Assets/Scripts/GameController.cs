@@ -195,6 +195,7 @@ public class GameController : MonoBehaviour
         {
             candyBags[bottomI[lane - 1]].GetComponent<Animator>().Play("BottomBagAnimation");
         }
+        EffectMixer.instance.PlayCandyBagSound();
     }
 
     private void SetCandyBagColors()
@@ -288,6 +289,7 @@ public class GameController : MonoBehaviour
                 PlayerPrefs.SetInt("HighScore", currentScore);
                 highScoreUI.transform.Find("ScoreText").GetComponent<Text>().text = currentScore.ToString();
                 highScoreUI.SetActive(true);
+                EffectMixer.instance.PlayNewHighScoreSound();
             }
         }
         else

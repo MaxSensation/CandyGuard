@@ -6,6 +6,8 @@ public class EffectMixer : MonoBehaviour
     private AudioSource effect;
     public AudioClip menuButtonSound;
     public AudioClip levelTransitionSound;
+    public AudioClip newHighScoreSound;
+    public AudioClip candyBagSound;
     public AudioClip[] bounceSounds;
 
     private void Awake()
@@ -38,6 +40,18 @@ public class EffectMixer : MonoBehaviour
     public void PlayMenuButtonSound()
     {
         effect.clip = levelTransitionSound;
+        effect.Play();
+    }
+
+    public void PlayNewHighScoreSound()
+    {
+        effect.clip = newHighScoreSound;
+        effect.Play();
+    }
+
+    public void PlayCandyBagSound()
+    {
+        effect.clip = candyBagSound;
         effect.Play();
     }
 

@@ -694,6 +694,8 @@ MonoBehaviour:
   menuButtonSound: {fileID: 8300000, guid: abe23683a75182a44be80ca0d39d6eee, type: 3}
   levelTransitionSound: {fileID: 8300000, guid: fad02d5b449e1254e8fe7995a3ecf5f8,
     type: 3}
+  newHighScoreSound: {fileID: 8300000, guid: 486b56d3d4a6ba44991efaf1e488d275, type: 3}
+  candyBagSound: {fileID: 8300000, guid: 2f06f6a24e057c444951e12cc9f07ca2, type: 3}
   bounceSounds:
   - {fileID: 8300000, guid: 945f5ff4bdde5814598435aef4f65e21, type: 3}
   - {fileID: 8300000, guid: 894a7afc82d4d5a4483921e60983afb8, type: 3}

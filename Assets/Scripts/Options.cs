@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Options : MonoBehaviour
@@ -9,7 +7,6 @@ public class Options : MonoBehaviour
     public Slider effectVolume;
     public static Options instance = null;
     private AudioSource menuMusic;
-    private string gameMode;
 
     private void Start()
     {
@@ -19,9 +16,11 @@ public class Options : MonoBehaviour
             GameObject.Find("ColorblindmodeToggle").GetComponent<Toggle>().isOn = true;
     }
 
-    public void Update()
+    public void UpdateVolume()
     {
-        instance.menuMusic.volume = musicVolume.value;
+        menuMusic.volume = musicVolume.value;
+        PlayerPrefs.SetFloat("MusicVolume", musicVolume.value);
+        PlayerPrefs.SetFloat("EffectVolume", effectVolume.value);        
     }
 
     public float GetMusicVolume()

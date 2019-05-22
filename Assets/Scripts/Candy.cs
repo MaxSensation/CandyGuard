@@ -2,8 +2,6 @@
 
 public class Candy : MonoBehaviour
 {
-    public Effectmusic effectmusic;
-
     private float speedRotate = 100f;
     private bool rotateRight = false;
     protected int lane;
@@ -15,7 +13,7 @@ public class Candy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         AddForce();
-        GetRotation();
+        GetRotation();        
     }
 
     void Update()
@@ -63,7 +61,7 @@ public class Candy : MonoBehaviour
     protected void FlipDirection()
     {
         rb.velocity = rb.velocity * -1;
-        effectmusic.PlayBounceSound();
+        Effectmusic.instance.PlayBounceSound();
     }
 
     protected void AddForce()

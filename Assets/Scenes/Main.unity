@@ -5520,6 +5520,16 @@ PrefabInstance:
       propertyPath: InitialModule.gravityModifier.scalar
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 3674200652309857667, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 937050714272833816, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4867d41b03002ce428aa1a76e3931a3b, type: 3}
 --- !u!4 &7243389875144548056 stripped

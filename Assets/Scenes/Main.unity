@@ -1740,7 +1740,7 @@ RectTransform:
   m_LocalScale: {x: 0.0052100206, y: 0.0052100206, z: 0.0052100206}
   m_Children: []
   m_Father: {fileID: 1433382681}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2036,7 +2036,7 @@ Transform:
   - {fileID: 1593623439}
   - {fileID: 2001612858}
   m_Father: {fileID: 1433382681}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &910072758
 AudioSource:
@@ -2780,7 +2780,7 @@ RectTransform:
   m_Children:
   - {fileID: 382489063}
   m_Father: {fileID: 1433382681}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3393,7 +3393,7 @@ RectTransform:
   m_Children:
   - {fileID: 360267916}
   m_Father: {fileID: 1433382681}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3569,10 +3569,10 @@ Transform:
   m_LocalScale: {x: 0.99758047, y: 0.99758047, z: 0.99758047}
   m_Children:
   - {fileID: 1915026627}
+  - {fileID: 799844218}
   - {fileID: 1108184000}
   - {fileID: 1284038754}
   - {fileID: 910072757}
-  - {fileID: 799844218}
   m_Father: {fileID: 1852850236}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -8,7 +8,7 @@ public class EffectMixer : MonoBehaviour
     public AudioClip levelTransitionSound;
     public AudioClip newHighScoreSound;
     public AudioClip candyBagSound;
-    public AudioClip[] bounceSounds;
+    public AudioClip[] bounceSounds;    
 
     private void Awake()
     {

@@ -37,7 +37,7 @@ public class MusicMixer : MonoBehaviour
 
     public void PlayMenuMusic()
     {
-        music.clip = timedModeMusic;
+        music.clip = menuMusic;
         music.Play();
     }
 

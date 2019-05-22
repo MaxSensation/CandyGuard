@@ -256,6 +256,7 @@ public class GameController : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
             timeleftText.text = ((int)Math.Round(timeLeft)).ToString();
+
             if (timeLeft < 0)
             {
                 GameOver();

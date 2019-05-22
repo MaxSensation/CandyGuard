@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public static GameController instance = null;
     public AudioSource gameMusic;
     public GameObject targetBar;
+    public Effectmusic effectmusic;
 
     private bool colorBlindModeActive = false;
     private TargetScoreBar scoreBar;
@@ -263,6 +264,7 @@ public class GameController : MonoBehaviour
         AddLevelTransitionEffects();
         difficultyChangeActive = false;
         scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
+        effectmusic.PlayLevelTransitionSound();
     }
 
     public void GameOver()

@@ -28,7 +28,7 @@ public class NormalCandy : Candy
             {                
                 if (GameController.instance.GetTopColor(lane).Equals((Color32) GetComponentInChildren<SpriteRenderer>().color))
                 {                    
-                    GameController.instance.AddScore(1);
+                    GameController.instance.AddScore(10);
                     GameController.instance.AnimateBag(true, lane);
                 }
                 else
@@ -43,7 +43,7 @@ public class NormalCandy : Candy
             {                
                 if (GameController.instance.GetBottomColor(lane).Equals((Color32) GetComponentInChildren<SpriteRenderer>().color))
                 {
-                    GameController.instance.AddScore(1);
+                    GameController.instance.AddScore(10);
                     GameController.instance.AnimateBag(false, lane);
                 }
                 else

@@ -5,12 +5,12 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
     private int startLevelNumberDefault = 1;
-    private int targetScoreDefault = 5;
+    private int targetScoreDefault = 50;
     private float candySpawnTimeDefault = 3f;
     private float candySpeedDefault = 2f;
     private float bonusCandySpawnTimeDefault = 20f;
 
-    public int targetScoreMulti = 15;
+    public int targetScoreMulti = 150;
     public float candySpawnTimeMulti = 0.9f;
     public float candySpeedMulti = 1.1f;
     public float bonusCandySpawnTimeMulti = 1.1f;
@@ -20,7 +20,7 @@ public class LevelGenerator : MonoBehaviour
         if (PlayerPrefs.GetString("GameMode", "") == "Endless")
         {
             startLevelNumberDefault = 1;
-            targetScoreDefault = 5;
+            targetScoreDefault = 50;
             candySpawnTimeDefault = 3f;
             candySpeedDefault = 2f;
             bonusCandySpawnTimeDefault = 20f;
@@ -121,7 +121,7 @@ public class LevelGenerator : MonoBehaviour
         if (levels.Capacity == 0)
         {
             return targetScoreDefault;
-        }               
+        }        
         return lastLevel.GetTargetScore() + targetScoreMulti;
     }
 

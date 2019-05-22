@@ -42,7 +42,7 @@ public class BonusCandy : Candy
                 if (GameController.instance.GetTopColor(lane).Equals((Color32)GetComponentInChildren<SpriteRenderer>().color))
                 {
                     GameController.instance.AnimateBag(true, lane);
-                    GameController.instance.AddScore(5);
+                    GameController.instance.AddScore(20);
                 }
             }
             else
@@ -50,7 +50,7 @@ public class BonusCandy : Candy
                 if (GameController.instance.GetBottomColor(lane).Equals((Color32)GetComponentInChildren<SpriteRenderer>().color))
                 {
                     GameController.instance.AnimateBag(false, lane);
-                    GameController.instance.AddScore(5);
+                    GameController.instance.AddScore(20);
                 }
             }
             Destroy(gameObject);

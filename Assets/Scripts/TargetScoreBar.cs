@@ -19,10 +19,10 @@ public class TargetScoreBar : MonoBehaviour
     }
 
     public void LevelUpdateBar(int currentScore, int targetScore)
-    {
-        ResetBar();
+    {        
         this.currentScore = currentScore;
         this.targetScore = targetScore;
+        UpdateBar(currentScore);
     }
 
     public void UpdateBar(int currentScore)

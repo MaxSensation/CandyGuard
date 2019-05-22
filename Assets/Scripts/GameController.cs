@@ -259,7 +259,7 @@ public class GameController : MonoBehaviour
     {
         GenerateLevel();
         SetCandyBagColors();        
-        AddSparklesToAllBags();
+        AddLevelTransitionEffects();
         difficultyChangeActive = false;
         scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
     }
@@ -288,8 +288,14 @@ public class GameController : MonoBehaviour
         }    
     }
 
-    public void AddSparklesToAllBags()
+    public void AddLevelTransitionEffects()
     {
+        ParticleSystem[] confettis = GameObject.Find("Player").gameObject.GetComponentsInChildren<ParticleSystem>();
+        foreach (ParticleSystem confetti in confettis)
+        {
+            confetti.Play();
+        }
+
         for (int i = 0; i < candyBags.Length; i++)
         {
             candyBags[i].GetComponentInChildren<ParticleSystem>().Play();

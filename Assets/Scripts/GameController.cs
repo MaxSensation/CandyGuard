@@ -262,7 +262,7 @@ public class GameController : MonoBehaviour
         AddLevelTransitionEffects();
         difficultyChangeActive = false;
         scoreBar.LevelUpdateBar(currentScore, currentLevel.GetTargetScore());
-        Effectmusic.instance.PlayLevelTransitionSound();
+        EffectMixer.instance.PlayLevelTransitionSound();
     }
 
     public void GameOver()

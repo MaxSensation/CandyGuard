@@ -61,7 +61,7 @@ public class Candy : MonoBehaviour
     protected void FlipDirection()
     {
         rb.velocity = rb.velocity * -1;
-        Effectmusic.instance.PlayBounceSound();
+        EffectMixer.instance.PlayBounceSound();
     }
 
     protected void AddForce()

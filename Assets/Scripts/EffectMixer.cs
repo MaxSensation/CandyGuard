@@ -1,23 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Effectmusic : MonoBehaviour
+public class EffectMixer : MonoBehaviour
 {
-    public static Effectmusic instance = null;
+    public static EffectMixer instance = null;
     private AudioSource effect;
+    public AudioClip menuButtonSound;
     public AudioClip levelTransitionSound;
     public AudioClip[] bounceSounds;
 
     private void Awake()
     {
         if (instance == null)
-            instance = this;
+            instance = this;         
         else if (instance != this)
             Destroy(gameObject);
+        DontDestroyOnLoad(GameObject.Find("SoundMixer"));
     }
 
-    void Start()
+    private void Start()
     {
         effect = GetComponent<AudioSource>();
         effect.volume = PlayerPrefs.GetFloat("EffectVolume", 1);
@@ -35,4 +35,14 @@ public class Effectmusic : MonoBehaviour
         effect.Play();
     }
 
+    public void PlayMenuButtonSound()
+    {
+        effect.clip = levelTransitionSound;
+        effect.Play();
+    }
+
+    public void SetVolume(float volume)
+    {
+        effect.volume = volume;
+    }
 }

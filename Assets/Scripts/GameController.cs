@@ -57,6 +57,7 @@ public class GameController : MonoBehaviour
         }
         levelGenerator = GetComponent<LevelGenerator>();
         GenerateLevel();
+        
     }
 
     private void ConvertToTimed()

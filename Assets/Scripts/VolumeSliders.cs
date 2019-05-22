@@ -8,19 +8,26 @@ public class VolumeSliders : MonoBehaviour
 
     private void Start()
     {
-        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);        
-        MusicMixer.instance.SetVolume(musicSlider.value);
+        SetDefualtEffectVolume();
+        SetDefualtMusicVolume();        
+    }
 
-        effectSlider.value = PlayerPrefs.GetFloat("EffectVolume", 1);
-        EffectMixer.instance.SetVolume(effectSlider.value);
+    private void SetDefualtMusicVolume()
+    {
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);        
+    }
+
+    private void SetDefualtEffectVolume()
+    {
+        effectSlider.value = PlayerPrefs.GetFloat("EffectVolume", 1);        
     }
 
     public void UpdateVolume()
-    {
-        PlayerPrefs.SetFloat("MusicVolume", musicSlider.value);
-        MusicMixer.instance.SetVolume(musicSlider.value);
-
+    {            
         PlayerPrefs.SetFloat("EffectVolume", effectSlider.value);
         EffectMixer.instance.SetVolume(effectSlider.value);
+
+        PlayerPrefs.SetFloat("MusicVolume", musicSlider.value);
+        MusicMixer.instance.SetVolume(musicSlider.value);
     }
 }

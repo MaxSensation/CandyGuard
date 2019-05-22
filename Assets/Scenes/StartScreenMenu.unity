@@ -5386,7 +5386,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1331325268}
-  - component: {fileID: 1331325269}
   m_Layer: 0
   m_Name: Volume
   m_TagString: Untagged
@@ -5413,20 +5412,6 @@ Transform:
   m_Father: {fileID: 2086378877}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1331325269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331325267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66726b3217c9cb244b0e821de0d1f6bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSlider: {fileID: 1969794912}
-  effectSlider: {fileID: 1338032819}
 --- !u!1 &1331797921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5592,6 +5577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1338032820}
   - component: {fileID: 1338032819}
+  - component: {fileID: 1338032821}
   m_Layer: 0
   m_Name: EffectSlider
   m_TagString: Untagged
@@ -5646,8 +5632,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331325269}
-        m_MethodName: UpdateVolume
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5681,6 +5667,18 @@ RectTransform:
   m_AnchoredPosition: {x: 1.9804382, y: -0.2480915}
   m_SizeDelta: {x: 553.1, y: 99.8}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1338032821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338032818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6bbbba7064b3b4ca160b42e11ac15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1423611845
 GameObject:
   m_ObjectHideFlags: 0
@@ -7974,6 +7972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969794911}
   - component: {fileID: 1969794912}
+  - component: {fileID: 1969794913}
   m_Layer: 0
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -8050,8 +8049,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331325269}
-        m_MethodName: UpdateVolume
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8063,6 +8062,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1969794913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969794910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72faaea2410db5f45a6abd5e7f07684c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2048347039
 GameObject:
   m_ObjectHideFlags: 0

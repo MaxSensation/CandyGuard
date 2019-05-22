@@ -358,7 +358,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 29532459}
-  clip1: {fileID: 8300000, guid: fad02d5b449e1254e8fe7995a3ecf5f8, type: 3}
+  levelTransitionSound: {fileID: 8300000, guid: fad02d5b449e1254e8fe7995a3ecf5f8,
+    type: 3}
+  bounceSounds:
+  - {fileID: 8300000, guid: 945f5ff4bdde5814598435aef4f65e21, type: 3}
+  - {fileID: 8300000, guid: 894a7afc82d4d5a4483921e60983afb8, type: 3}
+  - {fileID: 8300000, guid: c01d2d54d5d21b8429daefb4a1caa91b, type: 3}
+  - {fileID: 8300000, guid: 6baa850564b2ab541be79813c5a23d34, type: 3}
 --- !u!1 &178377656
 GameObject:
   m_ObjectHideFlags: 0
@@ -5954,46 +5960,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
-        type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
-        type: 3}
-      propertyPath: ShapeModule.angle
-      value: 18.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
-        type: 3}
-      propertyPath: InitialModule.startSize.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
-        type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
-        type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
-        type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 2484962149669499998, guid: 4867d41b03002ce428aa1a76e3931a3b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6055,6 +6021,46 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4176825417763574950, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207109711892614, guid: 4867d41b03002ce428aa1a76e3931a3b,
         type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
       value: 0.25

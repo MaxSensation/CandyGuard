@@ -5,7 +5,8 @@ using UnityEngine;
 public class Effectmusic : MonoBehaviour
 {
     public AudioSource effect;
-    public AudioClip clip1;
+    public AudioClip levelTransitionSound;
+    public AudioClip[] bounceSounds;
     private bool clip1NotPlayed = true; 
 
     void Start()
@@ -13,9 +14,15 @@ public class Effectmusic : MonoBehaviour
         effect = GetComponent<AudioSource>();
     }
 
+    public void PlayBounceSound()
+    {
+        effect.clip = bounceSounds[Random.Range(0, bounceSounds.Length)];
+        effect.Play();
+    }
+
     public void PlayLevelTransitionSound()
     {
-        effect.clip = clip1;
+        effect.clip = levelTransitionSound;
         effect.Play();
     }
 

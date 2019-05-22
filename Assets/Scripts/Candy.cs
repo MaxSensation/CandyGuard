@@ -2,8 +2,9 @@
 
 public class Candy : MonoBehaviour
 {
-    private float speedRotate = 100f;
+    public Effectmusic effectmusic;
 
+    private float speedRotate = 100f;
     private bool rotateRight = false;
     protected int lane;
     private int type;
@@ -62,6 +63,7 @@ public class Candy : MonoBehaviour
     protected void FlipDirection()
     {
         rb.velocity = rb.velocity * -1;
+        effectmusic.PlayBounceSound();
     }
 
     protected void AddForce()

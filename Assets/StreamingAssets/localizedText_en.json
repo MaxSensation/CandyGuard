@@ -1,1 +1,26 @@
-{"items":[{"key":"tap_screen_to_start","value":"Tap screen to start"},{"key":"play_endless","value":"Play endless"},{"key":"play_timed","value":"Play timed"},{"key":"highscore","value":"Highscore"},{"key":"timed","value":"Timed"},{"key":"options","value":"Options"},{"key":"language","value":"Language"},{"key":"volume","value":"Volume"},{"key":"music","value":"Music"},{"key":"effects","value":"Effects"},{"key":"credits","value":"Credits"},{"key":"back","value":"Back"},{"key":"level","value":"Level"},{"key":"candy","value":"Candy"},{"key":"score","value":"Score"},{"key":"game_over","value":"Game Over"},{"key":"restart","value":"Restart?"},{"key":"resume","value":"Resume?"},{"key":"return_to_menu","value":"Return to menu"},{"key":"paused","value":"Paused"},{"key":"new_highscore","value":"New Highscore!"},{"key":"endless","value":"Endless"},{"key":"colorblind_mode","value":"Colorblind Mode"},{"key":"times_up","value":"Times up"}]}
+{"items":[
+	{"key":"tap_screen_to_start","value":"Tap screen to start"},
+	{"key":"play_endless","value":"Play endless"},
+	{"key":"play_timed","value":"Play timed"},
+	{"key":"highscore","value":"Highscore"},
+	{"key":"timed","value":"Timed"},
+	{"key":"options","value":"Options"},
+	{"key":"language","value":"Language"},
+	{"key":"volume","value":"Volume"},
+	{"key":"music","value":"Music"},
+	{"key":"effects","value":"Effects"},
+	{"key":"credits","value":"Credits"},
+	{"key":"back","value":"Back"},
+	{"key":"level","value":"Level"},
+	{"key":"candy","value":"Candy"},
+	{"key":"score","value":"Score"},
+	{"key":"game_over","value":"Game Over"},
+	{"key":"restart","value":"Restart?"},
+	{"key":"resume","value":"Resume?"},
+	{"key":"return_to_menu","value":"Return to menu"},
+	{"key":"paused","value":"Paused"},
+	{"key":"new_highscore","value":"New Highscore!"},
+	{"key":"endless","value":"Endless"},
+	{"key":"colorblind_mode","value":"Colorblind Mode"},
+	{"key":"times_up","value":"Times up"}
+]}

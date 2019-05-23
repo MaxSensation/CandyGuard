@@ -9,7 +9,7 @@
 	{"key":"volume","value":"Volym"},
 	{"key":"music","value":"Musik"},
 	{"key":"effects","value":"Effekter"},
-	{"key":"credits","value":"Lista över medverkande"},
+	{"key":"credits","value":"Lista över spelskapare"},
 	{"key":"back","value":"Tillbaka"},
 	{"key":"level","value":"Nivå"},
 	{"key":"candy","value":"Godis"},
@@ -22,4 +22,5 @@
 	{"key":"new_highscore","value":"Nytt Rekord!"},
 	{"key":"endless","value":"Oändligt"},
 	{"key":"colorblind_mode","value":"Färgblind läge"},
-	{"key":"times_up","value":"Tiden är slut"}]}
+	{"key":"times_up","value":"Tiden är slut"}
+]}

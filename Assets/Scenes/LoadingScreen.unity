@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b6c9053ad147047abad5c53cebcb9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuMusic: {fileID: 8300000, guid: e19186aadfba1364485909e316d80e59, type: 3}
+  menuMusic: {fileID: 8300000, guid: 370cebcada7a7764a9e66e0abecdf08e, type: 3}
   endlessModeMusic: {fileID: 8300000, guid: af9b02cf1f453764cad2a3439bb6d370, type: 3}
   timedModeMusic: {fileID: 8300000, guid: e663ff8688ee8934b9b556a45596d1d4, type: 3}
 --- !u!82 &1737197969

@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public GameObject[] candyBags;
     public static GameController instance = null;
     public GameObject targetBar;
+    public GameObject DebugUI;
 
     private bool colorBlindModeActive = false;
     private TargetScoreBar scoreBar;
@@ -56,7 +57,15 @@ public class GameController : MonoBehaviour
         }
         levelGenerator = GetComponent<LevelGenerator>();
         GenerateLevel();
-        
+        if (PlayerPrefs.GetString("DebugMode", "false") == "true")
+        {
+            DebugUI.SetActive(true);
+        }        
+    }
+
+    public Level GetCurrentLevel()
+    {
+        return currentLevel;
     }
 
     private void ConvertToTimed()
@@ -223,6 +232,11 @@ public class GameController : MonoBehaviour
     public void RemoveActiveCandy()
     {
         candiesActive -= 1;
+    }
+    
+    public int GetActiveCandies()
+    {
+        return candiesActive;
     }
 
     public Color32 GetBottomColor(int lane)

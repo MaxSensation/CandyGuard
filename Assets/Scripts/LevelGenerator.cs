@@ -4,37 +4,16 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    private int startLevelNumberDefault = 1;
-    private int targetScoreDefault = 50;
-    private float candySpawnTimeDefault = 3f;
-    private float candySpeedDefault = 2f;
-    private float bonusCandySpawnTimeDefault = 20f;
+    private int startLevelNumberDefault;
+    private int targetScoreDefault;
+    private float candySpawnTimeDefault;
+    private float candySpeedDefault;
+    private float bonusCandySpawnTimeDefault;
 
     public int targetScoreMulti = 150;
     public float candySpawnTimeMulti = 0.9f;
     public float candySpeedMulti = 1.1f;
-    public float bonusCandySpawnTimeMulti = 1.1f;
-
-    public void Awake()
-    {        
-        if (PlayerPrefs.GetString("GameMode", "") == "Endless")
-        {
-            startLevelNumberDefault = 1;
-            targetScoreDefault = 50;
-            candySpawnTimeDefault = 3f;
-            candySpeedDefault = 2f;
-            bonusCandySpawnTimeDefault = 20f;
-        }
-        else
-        {
-            startLevelNumberDefault = 1;
-            targetScoreDefault = 10000;
-            candySpawnTimeDefault = 0.5f;
-            candySpeedDefault = 4f;
-            bonusCandySpawnTimeDefault = 15f;
-        }
-    }
-
+    public float bonusCandySpawnTimeMulti = 1.1f;        
     private ArrayList levels = new ArrayList();
     private Color32[] colors = {
         new Color32(50, 50, 50, 255),
@@ -54,6 +33,23 @@ public class LevelGenerator : MonoBehaviour
 
     public Level Generate()
     {
+        if (PlayerPrefs.GetString("GameMode", "") == "Endless" && lastLevel == null)
+        {
+            startLevelNumberDefault = 1;
+            targetScoreDefault = 50;
+            candySpawnTimeDefault = 3f;
+            candySpeedDefault = 2f;
+            bonusCandySpawnTimeDefault = 20f;
+        }
+        else if (PlayerPrefs.GetString("GameMode", "") == "Timed" &&  lastLevel == null)        
+        {
+            startLevelNumberDefault = 1;
+            targetScoreDefault = 10000;
+            candySpawnTimeDefault = 0.5f;
+            candySpeedDefault = 3f;
+            bonusCandySpawnTimeDefault = 15f;
+        }
+
         Level level = new Level(GenerateLevelNumber(), GenerateTopColors(), GenerateBottomColors(), GenerateTargetScore(), GenerateCandySpawnTime(), GenerateCandySpeed(), GenerateBonusCandySpawnTime());
         levels.Add(level);
         lastLevel = level;

@@ -53,8 +53,9 @@ public class BonusCandy : Candy
                     GameController.instance.AddScore(20);
                 }
             }
-            Destroy(gameObject);
+            Destroy(gameObject, 5);
             GameController.instance.RemoveActiveCandy();
         }
     }
+
 }

@@ -24,6 +24,6 @@ public class PlayButtonSound : MonoBehaviour
 
     private void PlaySound(bool toggle)
     {
-        EffectMixer.instance.PlayMenuButtonSound();
+        EffectMixer.instance.PlayColorBlindToggleSound();
     }
 }

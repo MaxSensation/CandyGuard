@@ -5,6 +5,7 @@ public class EffectMixer : MonoBehaviour
     public static EffectMixer instance = null;
     private AudioSource effect;
     public AudioClip menuButtonSound;
+    public AudioClip ColorblindModeToggleSound;
     public AudioClip levelTransitionSound;
     public AudioClip newHighScoreSound;
     public AudioClip candyBagSound;
@@ -46,6 +47,12 @@ public class EffectMixer : MonoBehaviour
     public void PlayNewHighScoreSound()
     {
         effect.clip = newHighScoreSound;
+        effect.Play();
+    }
+
+    public void PlayColorBlindToggleSound()
+    {
+        effect.clip = ColorblindModeToggleSound;
         effect.Play();
     }
 

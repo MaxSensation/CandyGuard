@@ -4213,6 +4213,7 @@ GameObject:
   - component: {fileID: 1067593701}
   - component: {fileID: 1067593702}
   - component: {fileID: 1067593703}
+  - component: {fileID: 1067593704}
   m_Layer: 5
   m_Name: ColorblindmodeToggle
   m_TagString: Untagged
@@ -4308,6 +4309,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72e7ab9b69fbe9e45b4957872bf5bc99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1067593704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067593700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b877900c4a593419c4bd9148ab0e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1108805110

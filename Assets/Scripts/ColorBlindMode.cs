@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class ColorBlindMode : MonoBehaviour
 {
     private Toggle toggle;
+
     void Start()
-    {
+    {        
         toggle = GetComponent<Toggle>();
         if (PlayerPrefs.GetInt("ColorBlind", 0) == 1)
             toggle.isOn = true;

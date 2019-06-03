@@ -39,7 +39,7 @@ public class LevelGenerator : MonoBehaviour
             targetScoreDefault = 50;
             candySpawnTimeDefault = 3f;
             candySpeedDefault = 2f;
-            bonusCandySpawnTimeDefault = 20f;
+            bonusCandySpawnTimeDefault = 20.5f;
         }
         else if (PlayerPrefs.GetString("GameMode", "") == "Timed" &&  lastLevel == null)        
         {

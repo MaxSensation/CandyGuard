@@ -16,10 +16,9 @@ public class Level
         this.bottomColors = bottomColors;
         this.targetScore = targetScore;
         this.candySpawnTime = candySpawnTime;
-        this.candySpeed = candySpeed;
-        this.bonusCandySpawnTime = bonusCandySpawnTime;
+        this.candySpeed = candySpeed;        
+        this.bonusCandySpawnTime = bonusCandySpawnTime;        
     }
-
 
     public int GetLevelNumber()
     {

@@ -46,7 +46,7 @@ public class LevelGenerator : MonoBehaviour
             startLevelNumberDefault = 1;
             targetScoreDefault = 10000;
             candySpawnTimeDefault = 0.5f;
-            candySpeedDefault = 3f;
+            candySpeedDefault = 2.8f;
             bonusCandySpawnTimeDefault = 15f;
         }
 
